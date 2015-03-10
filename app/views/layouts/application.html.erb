@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="nav">
+  <%= link_to 'Home', root_path %> |
+  <%= link_to 'Classified', root_path %> |
+  <%= link_to 'Photos', root_path %> |
+  <%= link_to 'Build', root_path %> |
+    
+  </div>
+
+
 
 <%= yield %>
+
+
 
 </body>
 </html>
