@@ -1,0 +1,14 @@
+<h1>WELCOME TO THE SPOKE CALCULATOR</h1>
+
+
+  <%= link_to "Add a new build", "/builds/new" %>
+
+
+<ul>
+	<% @builds.each do |r| %>
+	<%= link_to(r) do %>
+  			 <li><%= r.rim %>  /  <%= r.hub %> </li>		
+		<% end %>
+
+<% end %>
+</ul>
