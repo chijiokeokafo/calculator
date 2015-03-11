@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :photos
+  resources :users
+  resources :user_sessions
+
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'logout' => 'user_sessions#destroy', :as => :logout
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
-
+before_filter :require_login, except: [:index]
+	
 	def index 
 		@photo = Photo.all
 	end
