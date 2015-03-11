@@ -7,6 +7,10 @@ before_filter :require_login, except: [:index]
 
 	def show
 		@photo = Photo.find(params[:id])
+
+		if current_user
+			@review = @photo.reviews.build
+		end 
 	end 
 
 	def new 

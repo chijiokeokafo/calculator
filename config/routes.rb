@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  
   root 'home#index'
   get 'home/index'
 
-  resources :photos
+  resources :photos do 
+    resources :reviews, only: [:show, :create, :destroy]
+  end 
+
+
   resources :users
   resources :user_sessions
 
