@@ -1,11 +1,7 @@
 <h1>most recent photos posted by users </h1>
 
-	<% Photo.recent.each do |photo|%>
+	<% Photo.recent(10).each do |photo|%>
 	  <div id="photorecent">
-		<h4><%=link_to @photo.name, "/photos/#{photo.id}" %></h4>
-	<p>
-		Note: Photo image here to add
-		<%= @photo.description %>
-	</p>	
+		<h4><%=link_to photo.name, "/photos/#{photo.id}" %></h4>	
       </div>
 	<% end %>

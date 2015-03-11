@@ -1,0 +1,31 @@
+<%= form_for @photo do |f| %>
+  <% if @photo.errors.any? %> 
+      <div id="error_explanation">
+      <h3>
+        Whoops!
+        <%= pluralize(@photo.errors.count, "error") %> 
+        prohibited this photo from being saved: 
+      </h3>
+      <ul>
+        <% @photo.errors.full_messages.each do |message| %>
+        <li><%= message %> </li>
+        <% end %>
+        </ul>
+        </div>
+        <% end %>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class = "field">
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+      </div>
+      <div class="field">
+        <%= f.label :avatar, "Your photo" %>
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
+      </div>
+        <%= f.submit :submit %>
+      <% end %>
+

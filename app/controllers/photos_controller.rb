@@ -6,7 +6,6 @@ class PhotosController < ApplicationController
 
 	def show
 		@photo = Photo.find(params[:id])
-
 	end 
 
 	def new 
@@ -42,12 +41,12 @@ class PhotosController < ApplicationController
 	def destroy
 		@photo = Photo.find(params[:id])
 		@photo.destroy
-		redirect_to root_url
+		redirect_to photos_url
 	end 
 
 	private
 	def photo_params
-		params.require(:photo).permit(:name, :description)
+		params.require(:photo).permit(:name, :description, :avatar, :avatar_cache)
 	end 
 
 end
