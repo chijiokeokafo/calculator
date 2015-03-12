@@ -10,6 +10,10 @@ class ClassifiedsController < ApplicationController
 
   def show
     @classified = Classified.find(params[:id])
+
+    if current_user
+      @poster = @classified.posters.build
+    end
   end
 
   def create

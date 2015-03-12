@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
-  has_many :classifieds
+  has_many :posters
+  has_many :classifieds, through: :posters
+  
   has_many :reviews
   has_many :photos, through: :reviews 
+
 
   authenticates_with_sorcery!
 

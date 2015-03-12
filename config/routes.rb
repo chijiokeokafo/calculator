@@ -6,10 +6,14 @@ Rails.application.routes.draw do
     resources :reviews, only: [:show, :create, :destroy]
   end 
 
+  resources :classifieds do 
+    resources :posters, only: [:show, :create, :destroy]
+  end 
+
 
   resources :users
   resources :user_sessions
-  resources :classifieds
+  
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
