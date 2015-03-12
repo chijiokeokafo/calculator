@@ -20,6 +20,12 @@ class BuildsController < ApplicationController
     end
   end
 
+  def destroy
+    @build = Build.find(params[:id])
+      @build.destroy
+      redirect_to builds_path
+    end
+
 
   private
   
