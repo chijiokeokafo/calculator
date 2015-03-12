@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #authentication and authorization 
 gem "sorcery"
 
+#mailer gem
+gem "actionmailer"
+
 # Image gem
 gem 'carrierwave'
 gem "mini_magick"
@@ -37,6 +40,7 @@ gem "mini_magick"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+  gem 'letter_opener', :group => :development
 
 group :development, :test do
   gem 'quiet_assets'

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
 
-  resources :photos do 
+  resources :photos do
     resources :reviews, only: [:show, :create, :destroy]
   end 
 

@@ -2,7 +2,6 @@
 
 	<% Photo.recent(10).each do |photo|%>
 	  <div id="photorecent">
-		<h4><%=link_to photo.name, "/photos/#{photo.id}" %></h4>	
-     <%= image_tag photo.avatar_url(:large) %>
-      </div>
+		  <%=link_to image_tag(photo.avatar_url(:large)), "/photos/#{photo.id}" %>
+    </div>
 	<% end %>

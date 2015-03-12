@@ -1,7 +1,16 @@
-<h3><%= current_user.first_name %>'s Profile </h3>
+<h3><%= @user.first_name %>'s Profile </h3>
 
-<%= image_tag current_user.profile_image_url(:thumb) %><br>
+<%= image_tag @user.profile_image_url(:thumb) %><br>
 
-<h1>THINGS TO ADD </h1>
-list his photos and his purchases: what is it 
-that he sold, price and who purchased???? 
+<h4> Recent messages for <%= @user.first_name %>: </h4>
+  <% @user.posters.each do |poster| %>
+    <%= poster.message %>
+  <% end %>
+ <!-- classified.poster.message  -->
+
+<% if current_user == @user %>
+<h4>Photos of User</h4>
+  <% @user.photos.each do |photo| %>
+  <%= image_tag photo.picture %>
+  <% end %>
+<% end %>

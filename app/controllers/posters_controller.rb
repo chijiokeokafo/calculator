@@ -4,12 +4,16 @@ def show
   end
 
   def create
-    @classified = Classified.find(params[:classified_id])
-    @poster = @classified.posters.build(poster_params)
+    classified = Classified.find(params[:classified_id])
+    recipient = classified.user
+
+    @poster = classified.posters.build(poster_params)
+    binding.pry
     @poster.user = current_user
 
     if @poster.save
-      redirect_to classified_url(@classified), notice: 'Your post was created successfully'
+      UserMailer.notify_inquiry(classified, recipient, @poster).deliver_now
+      redirect_to classified_url(classified), notice: 'Your post was created successfully'
     else
       flash.now[:alert] = "An error occured, resubmit please" 
       render 'classifieds/show'
@@ -23,6 +27,6 @@ def show
 
 private
   def poster_params
-    params.require(:poster).permit(:messsage, :email, :name)
+    params.require(:poster).permit(:message, :email, :name)
   end
 end

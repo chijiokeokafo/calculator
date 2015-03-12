@@ -1,0 +1,10 @@
+<%= @recipient.first_name %>, you are receiving this message because you posted an ad with examplebike.com
+
+message for you
+<%= @poster.message %>
+
+Thank you for using examplebike.com
+
+Click this link to view your profile:
+
+<%= user_url(@recipient) %>
