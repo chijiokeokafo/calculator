@@ -4,5 +4,5 @@
 
 <% @photo.each do |photo| %>
   <h3><%= link_to photo.name, "/photos/#{photo.id}" %></h3> 
-  <%= photo.avatar_url(:medium) %>
+  <%= image_tag photo.avatar_url(:medium) %>
   <% end %>

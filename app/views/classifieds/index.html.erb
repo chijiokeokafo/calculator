@@ -1,0 +1,9 @@
+<h3><%= link_to "Creat your ad", new_classified_path %></h3>
+
+<% @classified.each do |classified| %>
+ 
+  <%= image_tag classified.picture_url(:medium)%><br>
+  <strong><%= link_to classified.title, "/classifieds/#{classified.id}" %><br></strong> 
+  <strong>Price:</strong> $<%= classified.amount %>.00<br>
+  <strong>Description:</strong> <%= classified.description %>
+  <% end %> 

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :classifieds
   has_many :reviews
   has_many :photos, through: :reviews 
 
@@ -8,4 +9,7 @@ class User < ActiveRecord::Base
   validates :password, confirmation: true
   validates :first_name, :last_name, :email, :password_confirmation, presence: true
   validates :email, uniqueness: true
+
+  mount_uploader :profile_image, AvatarUploader
+
 end

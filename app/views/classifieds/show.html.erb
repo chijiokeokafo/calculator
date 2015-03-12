@@ -1,0 +1,8 @@
+
+<%= image_tag @classified.picture_url(:large) %><br>
+<%= @classified.title %><br><br>
+<strong>Description:</strong> <br><%= @classified.description %><br>
+<strong>Price:</strong><br> $<%= @classified.amount %>.00 <br>
+
+<%= link_to 'Delete', @classified, data: {confirm: "Are you sure you want to delete your ad?"},method: :delete %> | <%= link_to "Edit", edit_classified_path %>
+
