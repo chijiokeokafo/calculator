@@ -19,7 +19,7 @@ before_filter :require_login, except: [:index]
 
 	def create
 		@photo = Photo.new(photo_params)
-		#@photo.user = current_user
+		@photo.user = current_user
 
 		if @photo.save
 			redirect_to photo_url(@photo), notice: "photo has been uploaded"
