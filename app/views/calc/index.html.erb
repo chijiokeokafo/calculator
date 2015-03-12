@@ -18,7 +18,7 @@
 </div>
 
 <div id="spokemodal">
-	Your Spoke Length Is: <span id="spokelength">uncalculated</span>
+	Your Spoke Length : <span id="spokelength">uncalculated</span>
 </div>
 <script>
 	function Build(attributes){
@@ -82,7 +82,7 @@
 			e.preventDefault();
 			build = extractBuild($('#spoke-form'));
 			console.log(build);
-			$('#spokelength').html(build.spokeLength());
+			$('#spokelength').html(Math.round(build.spokeLength()));
 			$('#spokemodal').fadeIn();
 			//$(document.body).append("Spoke length for this is: " + build.spokeLength());
 		});
