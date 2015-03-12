@@ -1,3 +1,26 @@
 // Place all the styles related to the calc controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+	text-align: center;
+	background-color: #EEE8AA;
+}
+
+
+
+#spokemodal{
+	display: none;
+	background-color: #6495ED;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+	width: 700px;
+	text-align: center;
+}
+
+#spokelength{
+	background-color: #6495ED;
+}
