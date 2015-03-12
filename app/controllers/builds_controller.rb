@@ -20,6 +20,19 @@ class BuildsController < ApplicationController
     end
   end
 
+  def update
+    @build = Build.find(params[:id])
+      if @build.update_attributes(build_params)
+        redirect_to build_path(@build)
+      else
+        render :edit
+      end
+  end
+
+  def edit
+    @build = Build.find(params[:id])
+  end
+
   def destroy
     @build = Build.find(params[:id])
       @build.destroy
