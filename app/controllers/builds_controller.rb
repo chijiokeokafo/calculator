@@ -1,6 +1,15 @@
 class BuildsController < ApplicationController
 	def index
-		@builds = Build.all
+		@builds = if params[:search]
+      Product.where('LOWER(name) LIKE LOWER(?)', "%#{params[:search]}%")
+    else
+      Build.all
+    end
+
+    repsond_to do |format|
+      format.html
+      format.js
+    end
 	end
 
 	def show
