@@ -1,12 +1,12 @@
 class BuildsController < ApplicationController
 	def index
 		@builds = if params[:search]
-      Product.where('LOWER(name) LIKE LOWER(?)', "%#{params[:search]}%")
+      Build.where('LOWER(rim) LIKE LOWER(?) OR LOWER(hub) LIKE LOWER(?)', "%#{params[:search]}%", "%#{params[:search]}%")
     else
       Build.all
     end
 
-    repsond_to do |format|
+    respond_to do |format|
       format.html
       format.js
     end
@@ -52,10 +52,12 @@ class BuildsController < ApplicationController
   private
   
   def build_params
-    params.require(:build).permit(:rim, :hub, :price_in_cents, :erd, :flange_diameter_left, :flange_diameter_right, :flange_center_left, :flange_center_right, :spoke_count, :spoke_hole_diameter, :spoke_crosses)
+    params.require(:build).permit(:rim, :hub, :erd, :flange_diameter_left, :flange_diameter_right, :flange_center_left, :flange_center_right, :spoke_count, :spoke_hole_diameter, :spoke_crosses)
   end
 
 end
+
+
 
 
  
