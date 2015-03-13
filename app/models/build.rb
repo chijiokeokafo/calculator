@@ -26,4 +26,19 @@ class Build < ActiveRecord::Base
 		Math.sqrt(rim_radius ** 2 + flange_radius ** 2 + flange_center ** 2 - 2 * rim_radius * flange_radius * Math.cos(720 * spoke_crosses * Math::PI / 180 * spoke_count)) - (spoke_hole_diameter / 2)
 	end
 
+	def cos_top
+		720 * spoke_crosses * Math::PI
+	end
+
+	def cos_btm
+		180 * spoke_count
+	end
+
+	def cosFunc
+		Math.cos(cos_top / cos_btm)
+	end 
+
+	def spoke_length(flange_radius, flange_center)
+		Math.sqrt(rim_radius ** 2 + flange_radius ** 2 + flange_center ** 2 - 2 * rim_radius * flange_radius * cosFunc) - (spoke_hole_diameter / 2)
+	end
 end

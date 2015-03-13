@@ -66,9 +66,9 @@
 			//$(document.body).append("Spoke length for this is: " + build.spokeLength());
 		});
 	};
-	$(document).ready(function(){
-	// 		if ($('body').data('controller') === "calc" &&
-	// $('body').data('action') === "index") {
+	$(document).on('ready page:load', function(){
+	// if ($('body').data('controller') === "calc" &&
+	// 	$('body').data('action') === "index") {
 	// 	alert("I'm here");
 	// }
 		$("#spokemodal").click(function() {
