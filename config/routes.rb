@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'builds#index'
+  # root 'builds#index'
   resources :calc 
   resources :builds
   # The priority is based upon order of creation: first created -> highest priority.

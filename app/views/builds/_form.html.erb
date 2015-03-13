@@ -2,11 +2,11 @@
   <% if @build.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
-      <ul>
+
         <% for message in @build.errors.full_messages %>
-          <li><%= message %></li>
+          <p><%= message %></p>
         <% end %>
-      </ul>
+
     </div>
   <% end %>
 
@@ -52,7 +52,7 @@
 
   <div class="field">
     <%= f.label :spoke_hole_diameter %><br/>
-    <%= f.text_field :spoke_hole_diameter %>
+    <%= f.text_field :spoke_hole_diameter, :placeholder => "eg: 2.5" %>
   </div>
 
   <div class="field">
