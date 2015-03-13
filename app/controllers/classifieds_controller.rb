@@ -29,6 +29,7 @@ class ClassifiedsController < ApplicationController
 
   def create
     @classified = Classified.new(classified_params)
+    @classified.user = current_user
 
     if @classified.save
       params[:classified_attachments]['picture'].each do |a|
