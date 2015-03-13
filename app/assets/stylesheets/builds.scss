@@ -1,0 +1,41 @@
+// Place all the styles related to the builds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	background-color: #EEE8AA;
+}
+
+#builds {
+	background-color: #F8F8FF;
+	border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+	width: 700px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#buildLink {
+	background-color: #F8F8FF;
+	border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+	width: 700px;
+	text-align: center;
+	cursor: pointer;
+
+}
+
+
+
+
+// // #spacer {
+// // 	background-color: #2F4F4F;
+// // 	border-radius: 5px;
+// //   margin-left: auto;
+// //   margin-right: auto;
+// // 	width: 700px;
+// // }

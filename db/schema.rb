@@ -13,6 +13,21 @@
 
 ActiveRecord::Schema.define(version: 20150313190414) do
 
+  create_table "builds", force: :cascade do |t|
+    t.string   "rim"
+    t.string   "hub"
+    t.integer  "erd"
+    t.integer  "flange_diameter_left"
+    t.integer  "flange_diameter_right"
+    t.integer  "flange_center_left"
+    t.integer  "flange_center_right"
+    t.integer  "spoke_count"
+    t.integer  "spoke_hole_diameter"
+    t.integer  "spoke_crosses"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
   create_table "classified_attachments", force: :cascade do |t|
     t.string   "picture"
     t.integer  "classified_id"

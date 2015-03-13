@@ -1,0 +1,68 @@
+<%= form_for @build do |f| %>
+  <% if @build.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+
+        <% for message in @build.errors.full_messages %>
+          <p><%= message %></p>
+        <% end %>
+
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rim %><br/>
+    <%= f.text_field :rim %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hub %><br/>
+    <%= f.text_field :hub %>
+  </div>
+
+  <div class="field">
+    <%= f.label :erd %><br/>
+    <%= f.text_field :erd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flange_diameter_left %><br/>
+    <%= f.text_field :flange_diameter_left %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flange_diameter_right %><br/>
+    <%= f.text_field :flange_diameter_right %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flange_center_left %><br/>
+    <%= f.text_field :flange_center_left %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flange_center_right %><br/>
+    <%= f.text_field :flange_center_right %>
+  </div>
+
+  <div class="field">
+    <%= f.label :spoke_count %><br/>
+    <%= f.text_field :spoke_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :spoke_hole_diameter %><br/>
+    <%= f.text_field :spoke_hole_diameter, :placeholder => "eg: 2.5" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :spoke_crosses %><br/>
+    <%= f.text_field :spoke_crosses %>
+  </div>
+
+  <p>
+    <div class="actions">
+    <%= f.submit class: "btn btn-submit" %>  
+    </div> 
+  </p>
+<% end %>
