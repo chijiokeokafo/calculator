@@ -8,7 +8,7 @@ def show
     recipient = classified.user
 
     @poster = classified.posters.build(poster_params)
-    binding.pry
+    # binding.pry
     @poster.user = current_user
 
     if @poster.save

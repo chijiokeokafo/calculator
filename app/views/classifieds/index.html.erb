@@ -1,9 +1,11 @@
+<%= form_tag classifieds_path, method: :get, authentication: false, id: 'search-form' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<div id="classifieds">
+  <%= render @classifieds %>
+</div>
+
 <h3><%= link_to "Create your ad", new_classified_path %></h3>
 
-<% @classified.each do |classified| %>
- 
-  <%= link_to image_tag(classified.picture_url(:medium)), classified_path(classified) %>
-  
-  <strong>Price:</strong> $<%= classified.amount %>.00<br>
-  <strong>Description:</strong> <%= classified.description %>
-<% end %> 

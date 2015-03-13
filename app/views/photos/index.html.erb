@@ -1,8 +1,8 @@
 <h1> index for photos </h1>
 
-<h3> <%= link_to "Add your memorable photo to our gallery!", new_photo_path %>
+<h3> <%= link_to "Add your memorable photo to our gallery!", new_photo_path %><br>
 
 <% @photo.each do |photo| %>
-  <h3><%= link_to photo.name, "/photos/#{photo.id}" %></h3> 
-  <%= image_tag photo.avatar_url(:medium) %>
+  <%= link_to image_tag(photo.avatar_url(:medium)), photo_path(photo) %>
   <% end %>
+

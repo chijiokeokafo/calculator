@@ -1,4 +1,4 @@
-<%= form_for @classified do |f|%>
+<%= form_for(@classified, html: { multipart: true }) do |f|%>
     <% if @classified.errors.any? %>
       <div id="error_explanation">
         <h3>
@@ -34,10 +34,23 @@
       <%= f.label :email%>
       <%= f.text_field :email %>
     </div>
-  <div class="field">
-        <%= f.label :picture, "Your photo" %>
-        <%= f.file_field :picture %>
-        <%= f.hidden_field :picture_cache %>
-      </div>
-    <%= f.submit :submit %>
+
+    <%= f.fields_for :classified_attachments do |p| %>
+       <div class="field">
+         <%= p.label :picture %><br>
+         <%= p.file_field :picture, :multiple => true, name: "classified_attachments[picture][]" %>
+       </div>
+    <% end %>
+
+   <% if params[:controller] == "classifieds" && params[:action] == "edit" %> 
+     <% @classified.classified_attachments.each do |p| %>
+       <% if p.id %>
+        <%= image_tag p.picture, :size => "150x150" %>
+        <% end %>
+     <% end %>
+   <% end %>
+
+    <div class="actions">
+       <%= f.submit :submit %>
+    </div>
 <% end %>

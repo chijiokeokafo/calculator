@@ -1,11 +1,22 @@
+<p id="notice"><%= notice %></p>
 
-<%= image_tag @classified.picture_url(:large) %><br>
-<%= @classified.title %><br><br>
+<p>
+  <strong>Title:</strong>
+  <%= @classified.title %>
+</p>
 <strong>Description:</strong> <br><%= @classified.description %><br>
 <strong>Price:</strong><br> $<%= @classified.amount %>.00 <br>
 I'm located in <strong><%= @classified.city %></strong><br>
 
-<%= link_to 'Delete', @classified, data: {confirm: "Are you sure you want to delete your ad?"},method: :delete %> | <%= link_to "Edit", edit_classified_path %>
+<% @classified_attachments.each do |p| %>
+  <%= image_tag p.picture_url, :size => "150x150" %>
+  <%# link_to "Destroy", p, method: :delete %>
+<% end %>
+
+<%= link_to 'Edit', edit_classified_path(@classified) %> |
+<%= link_to 'Back', classifieds_path %>
+
+
 
 
 <% if current_user %>

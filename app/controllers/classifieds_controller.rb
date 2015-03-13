@@ -1,15 +1,26 @@
 class ClassifiedsController < ApplicationController
 
   def index 
-    @classified = Classified.all
-  end 
+    @classifieds = if params[:search]
+      Classified.where("LOWER(title) LIKE LOWER(?)", "%#{params[:search]}%")
+    else 
+      Classified.all
+    end 
+
+    respond_to do |format|
+      format.html
+      format.js
+    end 
+  end
 
   def new
     @classified = Classified.new
+    @classified_attachments = @classified.classified_attachments.build
   end
 
   def show
     @classified = Classified.find(params[:id])
+    @classified_attachments = @classified.classified_attachments
 
     if current_user
       @poster = @classified.posters.build
@@ -20,6 +31,9 @@ class ClassifiedsController < ApplicationController
     @classified = Classified.new(classified_params)
 
     if @classified.save
+      params[:classified_attachments]['picture'].each do |a|
+          @classified_attachment = @classified.classified_attachments.create!(:picture => a, :classified_id => @classified.id)
+      end
       redirect_to classified_url(@classified), notice: "Your ad has been added"
     else
       flash.now[:alert] = "Error occured"
@@ -29,6 +43,7 @@ class ClassifiedsController < ApplicationController
 
   def edit
     @classified = Classified.find(params[:id])
+    @classified_attachments = @classified.classified_attachments.build
   end
     
   def update
@@ -50,7 +65,7 @@ class ClassifiedsController < ApplicationController
 private 
 
 def classified_params
-  params.require(:classified).permit(:title, :description, :amount, :email, :city, :picture, :picture_cache)
+  params.require(:classified).permit(:title, :description, :amount, :email, :city, classified_attachments_attributes: [:id, :classified_id, :picture])
 end  
 
 end
