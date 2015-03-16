@@ -27,6 +27,7 @@ class ClassifiedsController < ApplicationController
     end
   end
 
+
   def create
     @classified = Classified.new(classified_params)
     @classified.user = current_user
@@ -66,7 +67,21 @@ class ClassifiedsController < ApplicationController
 private 
 
 def classified_params
-  params.require(:classified).permit(:title, :description, :amount, :email, :city, classified_attachments_attributes: [:id, :classified_id, :picture])
+  params.require(:classified).permit(
+    :title,
+    :description,
+    :amount,
+    :email,
+    :city,
+    :image,
+    :image_cache,
+    classified_attachments_attributes: [
+      :id,
+      :classified_id,
+      :picture,
+      :_destroy
+    ]
+  )
 end  
 
 end

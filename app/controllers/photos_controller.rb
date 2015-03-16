@@ -2,8 +2,17 @@ class PhotosController < ApplicationController
 before_filter :require_login, except: [:index]
 	
 	def index 
-		@photo = Photo.all
-	end
+    @photo = if params[:search]
+      Photo.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+    else 
+      Photo.all
+    end 
+
+    respond_to do |format|
+      format.html
+      format.js
+    end 
+  end
 
 	def show
 		@photo = Photo.find(params[:id])

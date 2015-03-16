@@ -54,6 +54,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    cocoon (1.2.6)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -63,7 +64,6 @@ GEM
       execjs
     coffee-script-source (1.9.1)
     debug_inspector (0.0.2)
-    debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.4.0)
@@ -206,6 +206,7 @@ DEPENDENCIES
   actionmailer
   best_errors
   carrierwave
+  cocoon
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails

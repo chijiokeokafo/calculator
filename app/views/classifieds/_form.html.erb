@@ -34,21 +34,24 @@
       <%= f.label :email%>
       <%= f.text_field :email %>
     </div>
-
-    <%= f.fields_for :classified_attachments do |p| %>
-       <div class="field">
-         <%= p.label :picture %><br>
-         <%= p.file_field :picture, :multiple => true, name: "classified_attachments[picture][]" %>
-       </div>
-    <% end %>
-
-   <% if params[:controller] == "classifieds" && params[:action] == "edit" %> 
-     <% @classified.classified_attachments.each do |p| %>
-       <% if p.id %>
-        <%= image_tag p.picture, :size => "150x150" %>
+    <div class="field">
+        <% if @classified.image.present? %>
+          <%= image_tag @classified.image, size: '300x300' %>
+          <%= f.label :image, "Replace Image?" %>
+        <% else %>
+          <%= f.label :image, "Your classified image (required)" %>
         <% end %>
-     <% end %>
-   <% end %>
+        <%= f.file_field :image %>
+    </div>
+
+    <div id="classified_attachments">
+      <%= f.fields_for :classified_attachments do |attachment| %>
+        <%= render 'classified_attachment_fields', f: attachment %>
+      <% end %>
+
+      <%= link_to_add_association 'add another picture', f, :classified_attachments %>
+    </div>
+
 
     <div class="actions">
        <%= f.submit :submit %>
