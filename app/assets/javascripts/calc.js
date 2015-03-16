@@ -80,6 +80,6 @@ $(document).on('ready page:load', function(){
 // 	alert("I'm here");
 // }
 	$("#spokemodal").click(function() {
-		location.reload();
+		$("#spoke-form")[0].reset();
 	});
 });	
