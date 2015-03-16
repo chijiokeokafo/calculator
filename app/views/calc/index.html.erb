@@ -1,22 +1,16 @@
-<h1>OTF CALC</h1>
+<h1>SPOKES AINT NO JOKES</h1>
 <div id="calculator">
 	<%= form_tag({}, {id: 'spoke-form'}) do %>
-		<p><%= label_tag(:erd, "ERD:") %></p>
-		<%= text_field_tag(:erd ) %>
-		<p><%= label_tag(:flange_diam, "Flange Diameter:") %></p>
-		<%= text_field_tag(:flange_diam ) %>
-		<p><%= label_tag(:flange_offset, "Flange Offset:") %></p>
-		<%= text_field_tag(:flange_offset ) %>
-		<p><%= label_tag(:rim_holes, "Holes") %></p>
-		<%= text_field_tag(:rim_holes ) %>
-		<p><%= label_tag(:spoke_crosses, "Crosses:") %></p>
-		<%= text_field_tag(:spoke_crosses ) %>
-		<p><%= label_tag(:spoke_hole_diam, "Spoke Hole Diameter:") %></p>
-		<%= text_field_tag(:spoke_hole_diam, "2.5") %>
+		<p><%= text_field_tag(:erd, nil, class: 'calc_field', placeholder: 'ERD' ) %></p>
+		<p><%= text_field_tag(:flange_diam, nil, class: 'calc_field', placeholder: 'Flange ø' ) %></p>
+		<p><%= text_field_tag(:flange_offset, nil, class: 'calc_field', placeholder: 'Flange Offset' ) %></p>
+		<p><%= text_field_tag(:rim_holes, nil, class: 'calc_field', placeholder: 'Holes' ) %></p>
+		<p><%= text_field_tag(:spoke_crosses, nil, class: 'calc_field', placeholder: 'Crosses' ) %></p>
+		<p><%= text_field_tag(:spoke_hole_diam, nil, class: 'calc_field', placeholder: 'Spoke ø (eg: 2.5)') %>
 		<p><%= submit_tag "Calculate", id: "button" %></p>
 	<% end %>
 </div>
 
 <div id="spokemodal">
-	Your Spoke Length : <span id="spokelength">uncalculated</span>
+	<span id="spokelength">uncalculated</span>mm
 </div>

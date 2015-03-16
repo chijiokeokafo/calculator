@@ -1,4 +1,4 @@
-<h1>WELCOME TO THE SPOKE CALCULATOR</h1>
+<h1>SHARE YOUR BUILDS</h1>
 
 <div id="links">
 	<p><%= link_to "Add a new build", "/builds/new" %></p>
@@ -10,10 +10,10 @@
 </div>
 
 <div id="search-bar">
-	<%= form_tag builds_path, method: :get, authentication: false, id: 'search-form' do %>
+	<p><%= form_tag builds_path, method: :get, authentication: false, id: 'search-form' do %>
 	  <%= text_field_tag :search, params[:search], :placeholder => "eg: Mavic" %>
 	  <%= submit_tag "Search" %>
-	<% end %>
+	<% end %></p>
 </div>
 
 <div id="builds">

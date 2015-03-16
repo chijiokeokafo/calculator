@@ -3,9 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
-	font-family: Verdana, Geneva, sans-serif;
+	font-family:'Helvetica Neue',sans-serif;
 	text-align: center;
-	background-color: #EEE8AA;
 }
 
 #builds {
@@ -29,13 +28,34 @@
 
 }
 
+#specs {
+	background-color: #DCDCDC;
+	border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+	width: 400px;
+	display: none;
+	border: 3px solid black;
 
+}
 
+#builds {
+	background-color: #DCDCDC;
+	border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+	width: 400px;
+	display: none;
+	border: 3px solid black;
 
-// // #spacer {
-// // 	background-color: #2F4F4F;
-// // 	border-radius: 5px;
-// //   margin-left: auto;
-// //   margin-right: auto;
-// // 	width: 700px;
-// // }
+}
+
+#links {
+	background-color: #DCDCDC;
+	border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+	width: 400px;
+	border: 3px solid black;
+
+}
