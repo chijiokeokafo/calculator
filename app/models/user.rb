@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :reviews
   has_many :photos, through: :reviews
 
+  has_many :likes
 
   authenticates_with_sorcery!
 

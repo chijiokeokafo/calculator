@@ -6,6 +6,21 @@ end
   <%= render @photo %>
 </div>
 
+<!-- Button -->
+<!-- <button class="like_button">
+  LIKE
+</button> -->
+<% unless current_user.likes.where(photo_id: @photo.id).present? %>
+  <%= button_to "Like", likes_path(params: { photo: @photo.id }), class: "like_button" %>
+<% else %>
+  <button class="no_like_button">Liked!</button>
+<% end %>
+<p class="like_text"> Total Number of likes: <span id="like_number"> 
+  <%= @photo.likes.count %>
+   </span>
+</p>
+
+
 <%= link_to "Edit this Memory", edit_photo_path %> | <%= link_to "Delete this Memory", @photo, data: {confirm: "Are you sure you want to delete this project?"}, :method => :delete %> | <%= link_to "Back to Photos", photos_url %>
 
 <% if current_user %>
