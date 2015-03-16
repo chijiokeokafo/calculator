@@ -13,3 +13,10 @@ $(document).on('ready page:load', function(){
 		$(this).fadeTo('slow', 1);
 	});
 });
+
+$(document).on('ready page:load', function(){
+	$( '#builds' ).slideDown(1000).css('opacity', 0.3);
+	$('#builds').mouseenter(function(){
+		$(this).fadeTo('slow', 1);
+	});
+});
