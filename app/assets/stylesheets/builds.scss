@@ -29,7 +29,7 @@
 
 }
 
-#search-button {
+.button {
 	box-shadow: rgba(0,0,0,0.2) 0 1px 0 0;
 	color: #333;
 	background-color: #DCDCDC;
@@ -39,6 +39,7 @@
 	font-weight: 700;
 	height: 32px;
 	padding: 4px 16px;
+	width: auto;
 }
 
 #search-bar {

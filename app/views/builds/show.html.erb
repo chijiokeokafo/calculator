@@ -17,10 +17,8 @@
 			<p>Right Side Spoke Length: <%= @build.spoke_length_right %></p>
 			<p>Left Side Spoke Length: <%= @build.spoke_length_left %></p>
 		</div>
-	<div id="delete">
-		<%= link_to "| Delete |", build_path(@build), method: :delete %>
-	</div>	
-	<div id="edit">
-	<%= link_to "| Edit |", edit_build_path(@build) %> 
+	<div id="delete-edit">
+		<button class='button'><%= link_to 'Edit', edit_build_path(@build) %></button>
+		<button class='button'><%= link_to 'Delete', build_path(@build), method: :delete %></button>
 	</div>	
 </div>
