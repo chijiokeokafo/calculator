@@ -19,11 +19,11 @@ class BuildsController < ApplicationController
 	end
 
 	def new
-	  @build = Build.new 
+	  @build = current_user.builds.new
 	end
 
   def create
-    @build = Build.new build_params
+    @build = current_user.builds.new build_params
     if @build.save
       redirect_to builds_url
     else
