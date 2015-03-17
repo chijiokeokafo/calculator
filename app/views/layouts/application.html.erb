@@ -5,15 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
-  <div id="nav">
-  <%= link_to 'Home', root_path %> |
-  <%= link_to 'Classified', classifieds_path %> |
-  <%= link_to 'Photos', photos_path %> |
-  <%= link_to "Calculator", "/calc" %> |
-  <%= link_to 'Builds', builds_path %> |
-    
+
+<div class="logo">
+  <div class="img-container">
+    <%= image_tag "wheel.png", class: "wheel" %>
+  </div>
+  <h1 class="title"> The Wheel Shop </h1>
+</div>
+
+  <nav id="nav">
+    <%= link_to 'Home', root_path %> |
+    <%= link_to 'Classified', classifieds_path %> |
+    <%= link_to 'Photos', photos_path %> |
+    <%= link_to "Calculator", "/calc" %> |
+    <%= link_to 'Builds', builds_path %> |
+
     <% if current_user %>
      <%= link_to 'Profile', user_path(current_user.id) %> |
        
@@ -22,13 +31,16 @@
      <%= link_to 'Register', new_user_path %> |
      <%= link_to 'Login', :login %>
     <% end %>
-  </div>
+  </nav>
+
 
   <div>
       <p id="notice"><%= flash[:notice] %></p>
       <p id="alert"><%= flash[:alert] %></p>
   </div>
 
-  <%= yield %>
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
 </body>
 </html>
