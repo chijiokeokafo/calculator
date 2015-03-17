@@ -1,4 +1,5 @@
 class Build < ActiveRecord::Base
+	belongs_to :user
 	validates :rim, :hub, presence: true
 	validates :erd, :flange_diameter_left, :flange_diameter_right, :flange_center_right, :flange_center_left, :spoke_hole_diameter, :spoke_count, :spoke_crosses, presence: true
 	validates :erd, :flange_diameter_left, :flange_diameter_right, :flange_center_right, :flange_center_left, :spoke_hole_diameter, :spoke_count, :spoke_crosses, numericality: true
