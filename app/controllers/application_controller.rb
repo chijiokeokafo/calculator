@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private
-  def not_authenticated
-    redirect_to login_path, alert: "Please login first!"
+  def ensure_logged_in!
+    redirect_to login_path unless current_user
   end 
 
 end

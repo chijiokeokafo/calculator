@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316194411) do
+ActiveRecord::Schema.define(version: 20150317192448) do
 
   create_table "builds", force: :cascade do |t|
     t.string   "rim"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150316194411) do
     t.integer  "spoke_crosses"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.integer  "user_id"
   end
 
   create_table "classified_attachments", force: :cascade do |t|
