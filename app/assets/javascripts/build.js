@@ -20,3 +20,10 @@ $(document).on('ready page:load', function(){
 		$(this).fadeTo('slow', 1);
 	});
 });
+
+$(document).on('ready page:load', function(){
+	$( '#new-spoke-form' ).slideDown(2500).css('opacity', 0.3);
+	$('#new-spoke-form').mouseenter(function(){
+		$(this).fadeTo('slow', 1);
+	});
+});
