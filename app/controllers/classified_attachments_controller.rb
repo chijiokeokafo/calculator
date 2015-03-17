@@ -1,4 +1,5 @@
 class ClassifiedAttachmentsController < ApplicationController
+  load_and_authorize_resource
 
 def show
    @classified_attachments = @classified.classified_attachments.all

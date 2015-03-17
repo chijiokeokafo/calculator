@@ -1,5 +1,6 @@
 class ClassifiedsController < ApplicationController
-load_and_authorize_resource
+  before_filter :ensure_logged_in!, only: [:create, :update, :delete, :new]
+  load_and_authorize_resource
 
   def index 
     @classifieds = if params[:search]
@@ -37,7 +38,7 @@ load_and_authorize_resource
       params[:classified_attachments]['picture'].each do |a|
           @classified_attachment = @classified.classified_attachments.create!(:picture => a, :classified_id => @classified.id)
       end
-      redirect_to classified_url(@classified), notice: "Your ad has been added"
+      redirect_to classified_url(@classified)
     else
       flash.now[:alert] = "Error occured"
       render :new
