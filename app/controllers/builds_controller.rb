@@ -1,6 +1,8 @@
 class BuildsController < ApplicationController
   load_and_authorize_resource
 
+  before_filter :ensure_logged_in!, only: [:create, :update, :delete, :new]
+
 	def index
 		@builds = if params[:search]
       Build.where('LOWER(rim) LIKE LOWER(?) OR LOWER(hub) LIKE LOWER(?)', "%#{params[:search]}%", "%#{params[:search]}%")
@@ -15,15 +17,15 @@ class BuildsController < ApplicationController
 	end
 
 	def show
-	  @build = Build.find(params[:id])
+	  @build = Build.find params[:id]
 	end
 
 	def new
-	  @build = Build.new 
+	  @build = current_user.builds.new
 	end
 
   def create
-    @build = Build.new(build_params)
+    @build = current_user.builds.new build_params
     if @build.save
       redirect_to builds_url
     else

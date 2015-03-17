@@ -2,7 +2,15 @@
 
 <%= image_tag @user.profile_image_url(:thumb) %><br>
 
-<h4> Recent messages for <%= @user.first_name.capitalize %>: </h4>
+<h3>My Builds</h3>
+	<% @user.builds.each do |b| %>
+		<%= link_to(b) do %>
+			<%= b.rim %>
+		<% end %>
+	<% end %>	
+
+<h4> Recent messages for <%= @user.first_name %>: </h4>
+
   <% @user.posters.each do |poster| %>
     <%= poster.message %>
   <% end %>
@@ -14,4 +22,3 @@
     <%= image_tag photo.avatar_url(:medium) %>
   <% end %>
 <% end %>
-  
