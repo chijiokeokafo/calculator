@@ -3,20 +3,17 @@
 <div id="links">
 	<p><%= link_to "Add a new build", "/builds/new" %></p>
 	<p><%= link_to "Calculate some Spokes!", "/calc" %></p>
-</div>
-
-<div id="spacer">
-	<p>----------------BUILDS----------------</p>
-</div>
-
-<div id="search-bar">
+	<div id="search-bar">
+	<h4>SEARCH ANY RIM OR HUB</h4>
 	<p><%= form_tag builds_path, method: :get, authentication: false, id: 'search-form' do %>
 	  <%= text_field_tag :search, params[:search], :placeholder => "eg: Mavic" %>
-	  <%= submit_tag "Search" %>
+	  <%= submit_tag "Search", id: 'search-button' %>
 	<% end %></p>
+	</div>
 </div>
 
-<div class="specs">
+<div class="specs" id="builds">
+<p>----------------BUILDS----------------</p>
 	<%= render @builds %>
 </div>
 

@@ -15,16 +15,6 @@ $(document).on('ready page:load', function(){
 });
 
 $(document).on('ready page:load', function(){
-	$( '#links' ).slideDown(1000);
-	// $('#links').fadeTo('slow', 1)
-	// $('#builds').mouseenter(function(){
-	// 	$(this).fadeTo('slow', 1);
-	// });
+	$( '#links' ).slideDown(2500);
 });
 
-// $(document).on('ready page:load', function(){
-// 	$( '#new-spoke-form' ).slideDown(2500).css('opacity', 0.3);
-// 	$('#new-spoke-form').mouseenter(function(){
-// 		$(this).fadeTo('slow', 1);
-// 	});
-// });

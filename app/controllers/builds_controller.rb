@@ -17,7 +17,7 @@ class BuildsController < ApplicationController
 	end
 
 	def new
-		@build = Build.new
+	  @build = Build.new 
 	end
 
   def create
