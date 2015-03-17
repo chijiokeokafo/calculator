@@ -1,3 +1,26 @@
+.like_button {
+  background-color: blue;
+  padding: 05.em;
+  color: black;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+.no_like_button {
+  background-color: grey;
+  padding: 05.em;
+  color: black;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.like_text {
+  font-weight: bold;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

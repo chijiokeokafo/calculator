@@ -32,6 +32,8 @@ gem "actionmailer"
 # Image gem
 gem 'carrierwave'
 gem "mini_magick"
+
+gem "cocoon"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

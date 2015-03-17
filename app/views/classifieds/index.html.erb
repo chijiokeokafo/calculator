@@ -3,9 +3,8 @@
   <%= submit_tag "Search" %>
 <% end %>
 
+<h3><%= link_to "Create your ad", new_classified_path %></h3>
+
 <div id="classifieds">
   <%= render @classifieds %>
 </div>
-
-<h3><%= link_to "Create your ad", new_classified_path %></h3>
-

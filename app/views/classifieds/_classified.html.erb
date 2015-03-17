@@ -1,3 +1,5 @@
+
   <%= link_to classified.title, classified_path(classified)%>
-   <%= classified.title %>
-   <%= number_to_currency(classified.amount) %>
+  <%= number_to_currency(classified.amount) %>
+  <%= link_to image_tag(classified.image_url(:medium)), classified_path(classified) %>
+

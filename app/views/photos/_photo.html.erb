@@ -1,6 +1,8 @@
 <h4><%= @photo.name %></h4>
 
  <%= image_tag @photo.avatar_url(:large) %>
+<br>
+Posted by: <strong><%= @photo.user.first_name %></strong>
 
 <div id="photo-description">
 <%= @photo.description %>
