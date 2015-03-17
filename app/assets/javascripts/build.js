@@ -8,22 +8,23 @@ $(document).on('ready page:load', function(){
 });
 
 $(document).on('ready page:load', function(){
-	$( '#specs' ).slideDown(2500).css('opacity', 0.3);
-	$('#specs').mouseenter(function(){
+	$( '.specs' ).slideDown(2500).css('opacity', 0.3);
+	$('.specs').mouseenter(function(){
 		$(this).fadeTo('slow', 1);
 	});
 });
 
 $(document).on('ready page:load', function(){
-	$( '#builds' ).slideDown(1000).css('opacity', 0.3);
-	$('#builds').mouseenter(function(){
-		$(this).fadeTo('slow', 1);
-	});
+	$( '#links' ).slideDown(1000);
+	// $('#links').fadeTo('slow', 1)
+	// $('#builds').mouseenter(function(){
+	// 	$(this).fadeTo('slow', 1);
+	// });
 });
 
-$(document).on('ready page:load', function(){
-	$( '#new-spoke-form' ).slideDown(2500).css('opacity', 0.3);
-	$('#new-spoke-form').mouseenter(function(){
-		$(this).fadeTo('slow', 1);
-	});
-});
+// $(document).on('ready page:load', function(){
+// 	$( '#new-spoke-form' ).slideDown(2500).css('opacity', 0.3);
+// 	$('#new-spoke-form').mouseenter(function(){
+// 		$(this).fadeTo('slow', 1);
+// 	});
+// });
