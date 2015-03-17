@@ -1,5 +1,7 @@
 class PostersController < ApplicationController
-def show
+  load_and_authorize_resource
+  
+  def show
     @poster = Poster.find(params[:id])
   end
 

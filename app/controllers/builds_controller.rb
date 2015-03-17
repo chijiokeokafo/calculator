@@ -1,4 +1,6 @@
 class BuildsController < ApplicationController
+  load_and_authorize_resource
+
 	def index
 		@builds = if params[:search]
       Build.where('LOWER(rim) LIKE LOWER(?) OR LOWER(hub) LIKE LOWER(?)', "%#{params[:search]}%", "%#{params[:search]}%")

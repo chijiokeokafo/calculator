@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  load_and_authorize_resource
+
   def show
     @review = Review.find(params[:id])
   end
