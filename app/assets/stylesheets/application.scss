@@ -1,0 +1,74 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "**/*";
+
+$light-grey: #adadad;
+$light-grey: lighten($light-grey, 10%);
+$dark-grey: #939393;
+$darkest-grey: darken($dark-grey, 20%);
+
+
+$nav-color: white;
+$navborder: black;
+
+body{
+	background: $light-grey;
+}
+
+.logo {
+	display: block;
+	position: relative;
+	height: 90px;
+}
+
+img.wheel {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 7px;
+	top: 0px;
+}
+
+.img-container {
+	display: block;
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.title {
+	line-height: 0;
+	float: left;
+	font-size: 40px;
+	position: absolute;
+	left: 100px;
+	bottom: 0;
+	font-family: 'Orbitron', sans-serif;
+}
+
+#nav {
+	clear: both;
+	background: $navborder;
+	color: $nav-color;
+	border-bottom: 1px solid $navborder;
+	font-size: 12pt;
+	padding-left: 19px;
+	text-align: left;
+
+
+
+	a {
+		text-decoration: underline;
+		color: $nav-color;
+	}
+
+	a:hover {
+		color: orange;
+	}
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: black;
+}
