@@ -1,5 +1,6 @@
 class ClassifiedsController < ApplicationController
 
+
   def index 
     @classifieds = if params[:search]
       Classified.where("LOWER(title) LIKE LOWER(?)", "%#{params[:search]}%")
