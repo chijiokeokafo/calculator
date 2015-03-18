@@ -19,10 +19,12 @@
 
   <nav id="nav">
     <%= link_to 'Home', root_path %> |
-    <%= link_to 'Classified', classifieds_path %> |
-    <%= link_to 'Photos', photos_path %> |
     <%= link_to "Calculator", "/calc" %> |
     <%= link_to 'Builds', builds_path %> |
+    <%= link_to 'Buy/Sell', classifieds_path %> |
+    <%= link_to 'Photos', photos_path %> |
+    
+    
 
     <% if current_user %>
      <%= link_to 'Profile', user_path(current_user.id) %> |
