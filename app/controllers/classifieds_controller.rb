@@ -74,6 +74,9 @@ def classified_params
     :amount,
     :email,
     :city,
+    :address,
+    :latitude,
+    :longitude,
     :image,
     :image_cache,
     classified_attachments_attributes: [
