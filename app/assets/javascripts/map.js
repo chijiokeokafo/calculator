@@ -25,8 +25,11 @@ Map.prototype.addMarker = function(latitude, longitude) {
 
 $(document).on('page:load ready', function(){
 	if ($('#map-canvas').length) {
+		var latitude = parseFloat($('#map-canvas').data('latitude'));
+		var longitude = parseFloat($('#map-canvas').data('longitude'));
+
 		var myMap = new Map($('#map-canvas')[0]);
-		myMap.init(43.6426, -79.3871);
-		myMap.addMarker(43.6426, -79.3871);
+		myMap.init(latitude, longitude);
+		myMap.addMarker(latitude, longitude);
 	};
 });
