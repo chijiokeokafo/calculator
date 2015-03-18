@@ -7,6 +7,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
 
@@ -20,7 +21,7 @@
   <nav id="nav">
     <%= link_to 'Home', root_path %> |
     <%= link_to "Calculator", "/calc" %> |
-    <%= link_to 'Builds', builds_path %> |
+    <%= link_to 'Builds', builds_path %> |t
     <%= link_to 'Buy/Sell', classifieds_path %> |
     <%= link_to 'Photos', photos_path %> |
     
