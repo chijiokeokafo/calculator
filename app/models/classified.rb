@@ -10,6 +10,6 @@ class Classified < ActiveRecord::Base
   # after_validation :geocode, if: :address_changed?
 
   # def full_address
-  # 	"#{address} #{city} #{province}"	
+  # 	"#{address} #{city}"	
   # end
 end
