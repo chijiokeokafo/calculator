@@ -6,11 +6,9 @@
           <%= pluralize(@classified.errors.count, "error")%>
           prohibited this classified from being saved:
         </h3>
-        <ul>
           <% @classified.errors.full_messages.each do |message|%>
-          <li><%= message %></li>
+          <%= message %><br>
           <% end %>
-        </ul>
       </div>
     <% end %>
 
