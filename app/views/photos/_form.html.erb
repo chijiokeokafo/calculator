@@ -21,6 +21,12 @@
         <%= f.label :description %>
         <%= f.text_field :description %>
       </div>
+
+       <div>
+        <%= collection_select(:photo, :photo_category_id, PhotoCategory.all, :id, :name, prompt: true) %>
+<!-- collection_select(:post, :author_id, Author.all, :id, :name_with_initial, prompt: true) -->
+       </div> 
+
       <div class="field">
         <%= f.label :avatar, "Your photo" %>
         <%= f.file_field :avatar %>

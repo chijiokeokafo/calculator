@@ -8,7 +8,7 @@ $light-grey: #adadad;
 $light-grey: lighten($light-grey, 10%);
 $dark-grey: #939393;
 $darkest-grey: darken($dark-grey, 20%);
-
+$orange: #F69B32;
 
 $nav-color: white;
 $navborder: black;
@@ -65,8 +65,26 @@ img.wheel {
 	}
 
 	a:hover {
-		color: orange;
+		color: $orange;
 	}
+}
+
+.inline {
+	li {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		padding: 0.5em 1.5em;
+		margin-right: 0.5em;
+		border-radius: 0.5em;
+		background-color: $orange;
+		border: darken($orange, 50%);
+		color: $nav-color;
+	}
+	list-style-type: none;
 }
 
 h1, h2, h3, h4, h5, h6{
