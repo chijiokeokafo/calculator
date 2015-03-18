@@ -2,6 +2,7 @@ class ClassifiedsController < ApplicationController
   before_filter :ensure_logged_in!, only: [:create, :update, :delete, :new]
   load_and_authorize_resource
 
+
   def index 
     @classifieds = if params[:search]
       Classified.where("LOWER(title) LIKE LOWER(?)", "%#{params[:search]}%")
@@ -35,8 +36,12 @@ class ClassifiedsController < ApplicationController
     @classified.user = current_user
 
     if @classified.save
-      params[:classified_attachments]['picture'].each do |a|
-          @classified_attachment = @classified.classified_attachments.create!(:picture => a, :classified_id => @classified.id)
+      if params[:classified_attachments]
+        params[:classified_attachments]['picture'].each do |a|
+            @classified_attachment = @classified.classified_attachments
+                                                .create!(:picture => a, 
+                                                         :classified_id => @classified.id)
+        end
       end
       redirect_to classified_url(@classified)
     else
@@ -63,7 +68,7 @@ class ClassifiedsController < ApplicationController
   def destroy
     @classified = Classified.find(params[:id])
     @classified.destroy
-    redirect_to root_url
+    redirect_to classifieds_url
   end 
 
 private 
@@ -75,6 +80,9 @@ def classified_params
     :amount,
     :email,
     :city,
+    :address,
+    :latitude,
+    :longitude,
     :image,
     :image_cache,
     classified_attachments_attributes: [

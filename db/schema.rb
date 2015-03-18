@@ -45,9 +45,12 @@ ActiveRecord::Schema.define(version: 20150318183904) do
     t.string   "email"
     t.string   "city"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "image"
+    t.string   "address"
+    t.decimal  "latitude",    precision: 9, scale: 6
+    t.decimal  "longitude",   precision: 9, scale: 6
   end
 
   create_table "likes", force: :cascade do |t|
