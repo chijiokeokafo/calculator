@@ -5,20 +5,37 @@
 <h3>My Builds</h3>
 	<% @user.builds.each do |b| %>
 		<%= link_to(b) do %>
-			<%= b.rim %>
+			<%= b.rim %>/<%= b.hub %><br>
 		<% end %>
 	<% end %>	
 
-<h4> Recent messages for <%= @user.first_name %>: </h4>
+<h3>My Ads</h3>
+  <% @user.classifieds.each do |c| %>
+    <%= link_to(c) do %>
+      <%= c.title %>/$<%= c.amount %>
+    <% end %>
+  <% end %>   
+
+<h3>My Messages</h3>
 
   <% @user.posters.each do |poster| %>
+    <h4><%= poster.name %></h4>
     <%= poster.message %>
   <% end %>
  <!-- classified.poster.message  -->
 
 <% if current_user == @user %>
-<h4>Photos of User</h4>
-  <% @user.photos.each do |photo| %>
-    <%= image_tag photo.avatar_url(:medium) %>
-  <% end %>
+  <h3>My Photos</h3>
+  <div id="my-photos">
+    <% @user.photos.each do |p| %>
+      <%= link_to image_tag(p.avatar_url(:large)), '/photos/#{photo.id}' %>
+    <% end %>
+  </div> 
 <% end %>
+
+
+<!--   <% Photo.recent(10).each do |photo|%>
+    <div id="photorecent">
+      <%=link_to image_tag(photo.avatar_url(:large)), "/photos/#{photo.id}" %>
+    </div>
+  <% end %> -->
