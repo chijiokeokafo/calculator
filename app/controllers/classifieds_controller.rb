@@ -11,8 +11,8 @@ class ClassifiedsController < ApplicationController
     end 
 
     if params[:classified_category_id]
-      # @classified = @classified.where(classified_category_id: params[:classified_category_id])
-      @classified = ClassifiedCategory.find(params[:classified_category_id]).classifieds
+      @classifieds = @classifieds.where(classified_category_id: params[:classified_category_id])
+      # @classified = ClassifiedCategory.find(params[:classified_category_id]).classifieds 
     end
 
     respond_to do |format|
