@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   has_many :reviews
   has_many :photos, through: :reviews
+  has_many :uploaded_photos, class_name: 'Photo'
   has_many :builds
 
   has_many :likes
