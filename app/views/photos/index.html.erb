@@ -1,8 +1,8 @@
 <ul class="inline">
-  <li><%= link_to 'All', photos_path, class: 'btn btn-secondary'  %></li>
+  <li><%= link_to 'All', photos_path, class: 'btn btn-secondary wheel-trigger'  %></li>
   <% PhotoCategory.all.each do |category| %>
     <li>
-      <%= link_to category.name, photos_path(photo_category_id: category.id), class: 'btn btn-secondary' %>
+      <%= link_to category.name, photos_path(photo_category_id: category.id), class: 'btn btn-secondary wheel-trigger' %>
     </li>
   <% end %>
 </ul>

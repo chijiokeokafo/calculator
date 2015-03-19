@@ -17,27 +17,62 @@ body{
 	background: $light-grey;
 }
 
+
+// .img-container img {
+//     position: relative;
+//     top: 0px;
+//     transition: transform .2s ease-in-out;
+// }
+
 .logo {
 	display: block;
 	position: relative;
 	height: 90px;
 	background: rgb(169, 179, 186);
+	margin-bottom: 1em;
 }
   
 
-img.wheel {
+.wheel {
 	width: 100px;
 	height: 100px;
-	position: absolute;
-	left: 7px;
-	top: 0px;
+
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	-o-transition: transform 1s ease;
+
+	-webkit-transform: rotateZ(0);
+	-moz-transform: rotateZ(0);
+	-o-transform: rotateZ(0);
+	transform: rotateZ(0);
+
+	.img-container.is-rolling & {
+	  -webkit-transform: rotateZ(7200deg);
+	  -moz-transform: rotateZ(7200deg);
+	  -o-transform: rotateZ(7200deg);
+	  transform: rotateZ(7200deg);
+	}
 }
 
 .img-container {
 	display: block;
-	width: 100px;
-	height: 100px;
-	float: left;
+	text-align: left;
+
+	-webkit-transition: transform 1s ease;
+	-moz-transition: transform 1s ease;
+	-o-transition: transform 1s ease;
+
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+
+	&.is-rolling {
+	  -webkit-transform: translateX(100%);
+	  -moz-transform: translateX(100%);
+	  -o-transform: translateX(100%);
+	  transform: translateX(100%);
+	}
 }
 
 .title {
@@ -50,7 +85,7 @@ img.wheel {
 	font-family: 'Orbitron', sans-serif;
 }
 
-#nav {
+.navbar-inverse {
 	clear: both;
 	background: $navborder;
 	color: $nav-color;
@@ -91,4 +126,27 @@ img.wheel {
 
 h1, h2, h3, h4, h5, h6{
 	color: black;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -5em; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .page-wrap:after {
+  height: 5em; 
+}
+
+.site-footer {
+  background: #939393;
 }

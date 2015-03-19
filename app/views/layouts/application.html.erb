@@ -9,7 +9,7 @@
   <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
-
+<div class="page-wrap">
 <div class="logo">
   <div class="img-container">
     <%= image_tag "wheel.png", class: "wheel" %>
@@ -17,7 +17,33 @@
   <h1 class="title"> The Wheel Shop </h1>
 </div>
 
-  <nav id="nav">
+  <nav class="navbar navbar-inverse">
+    <%= link_to 'Home', root_path, class: 'navbar-brand' %> 
+    <%= link_to "Calculator", "/calc", class: 'navbar-brand' %> 
+    <%= link_to 'Builds', builds_path, class: 'navbar-brand' %> 
+    <%= link_to 'Buy/Sell', classifieds_path, class: 'navbar-brand' %> 
+    <%= link_to 'Photos', photos_path, class: 'navbar-brand' %> 
+
+   <!--  <form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+     -->
+    
+
+    <% if current_user %>
+     <%= link_to 'Profile', user_path(current_user.id), {class: 'navbar-brand'} %> 
+       
+     <%= link_to 'Logout', :logout, class: 'navbar-brand', method: :post %>
+    <% else %> 
+     <%= link_to 'Register', new_user_path, {class: 'navbar-brand'} %> 
+     <%= link_to 'Login', :login, {class: 'navbar-brand'} %>
+    <% end %>
+  </nav>
+
+  <!-- <nav id="nav">
     <%= link_to 'Home', root_path %> |
     <%= link_to 'Classified', classifieds_path %> |
     <%= link_to 'Photos', photos_path %> |
@@ -32,7 +58,7 @@
      <%= link_to 'Register', new_user_path %> |
      <%= link_to 'Login', :login %>
     <% end %>
-  </nav>
+  </nav> -->
 
 
   <div>
@@ -43,7 +69,17 @@
   <div class="container-fluid">
     <%= yield %>
   </div>
+</div>
+ 
+<footer class="site-footer">
+  <nav>
+    <a href="">Previous</a><br><a href="">Next</a>    
+  </nav>
 
   <p><medium>Copyright 2015</medium></p>
+</footer>
+
+ 
+
 </body>
 </html>
