@@ -20,6 +20,10 @@
       <%= f.label :description %>
       <%= f.text_field :description %>
     </div>
+    <div>
+    <strong>Choose category</strong>
+    <%= collection_select(:classified, :classified_category_id, ClassifiedCategory.all, :id, :name, prompt: true) %>
+    </div>
     <div class="field">
       <%= f.label :address %>
       <%= f.text_field :address %>

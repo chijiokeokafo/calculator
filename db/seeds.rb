@@ -1,3 +1,4 @@
+
 PhotoCategory.create(name: 'BMX')
 PhotoCategory.create(name: 'Road Bike')
 PhotoCategory.create(name: 'Trail Bike')
@@ -6,3 +7,10 @@ PhotoCategory.create(name: 'Fat Bike')
 PhotoCategory.create(name: 'Mountain Bike')
 PhotoCategory.create(name: 'Other')
 
+ClassifiedCategory.create(name: 'Bikes')
+ClassifiedCategory.create(name: 'Frames')
+ClassifiedCategory.create(name: 'Drivetrain')
+ClassifiedCategory.create(name: 'Wheels')
+ClassifiedCategory.create(name: 'Steering')
+ClassifiedCategory.create(name: 'Tools')
+ClassifiedCategory.create(name: 'Accessories')

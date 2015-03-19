@@ -1,5 +1,6 @@
 class Classified < ActiveRecord::Base
   belongs_to :user
+  belongs_to :classified_category
   has_many :posters
   has_many :users, through: :posters
   has_many :classified_attachments

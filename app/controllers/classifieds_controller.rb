@@ -10,6 +10,11 @@ class ClassifiedsController < ApplicationController
       Classified.all
     end 
 
+    if params[:classified_category_id]
+      # @classified = @classified.where(classified_category_id: params[:classified_category_id])
+      @classified = ClassifiedCategory.find(params[:classified_category_id]).classifieds
+    end
+
     respond_to do |format|
       format.html
       format.js
@@ -77,6 +82,7 @@ def classified_params
   params.require(:classified).permit(
     :title,
     :description,
+    :classified_category_id,
     :amount,
     :email,
     :city,

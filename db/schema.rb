@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318183904) do
+ActiveRecord::Schema.define(version: 20150319010924) do
 
   create_table "builds", force: :cascade do |t|
     t.string   "rim"
@@ -38,6 +38,12 @@ ActiveRecord::Schema.define(version: 20150318183904) do
 
   add_index "classified_attachments", ["classified_id"], name: "index_classified_attachments_on_classified_id"
 
+  create_table "classified_categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "classifieds", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -45,12 +51,13 @@ ActiveRecord::Schema.define(version: 20150318183904) do
     t.string   "email"
     t.string   "city"
     t.integer  "user_id"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.string   "image"
     t.string   "address"
-    t.decimal  "latitude",    precision: 9, scale: 6
-    t.decimal  "longitude",   precision: 9, scale: 6
+    t.decimal  "latitude",               precision: 9, scale: 6
+    t.decimal  "longitude",              precision: 9, scale: 6
+    t.integer  "classified_category_id"
   end
 
   create_table "likes", force: :cascade do |t|
