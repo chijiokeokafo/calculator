@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :posters
   has_many :classifieds, through: :posters
+  has_many :created_classifieds, class_name: 'Classified'
 
   has_many :reviews
   has_many :photos, through: :reviews

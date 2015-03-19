@@ -12,9 +12,9 @@
 <br>
 <div class="profile">
   <h3>My Ads</h3>
-    <% @user.classifieds.each do |c| %>
+    <% @user.created_classifieds.each do |c| %>
       <%= link_to(c) do %>
-        <%= c.title %>/$<%= c.amount %>
+        <%= c.title %>/$<%= c.amount %><br>
       <% end %>
     <% end %>   
 </div>
@@ -24,8 +24,6 @@
   <div id="message">
   <h3>My Messages</h3>
     <% @user.posters.each do |poster| %>
-
-      From: <%= poster.name %><br>
       Re: <%= poster.classified.title %><br>
       <%= poster.message %><br>
     <% end %>
