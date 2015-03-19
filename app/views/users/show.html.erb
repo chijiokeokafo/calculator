@@ -1,41 +1,45 @@
 <h3><%= @user.first_name.capitalize %>'s Profile </h3>
 
 <%= image_tag @user.profile_image_url(:thumb) %><br>
-
-<h3>My Builds</h3>
-	<% @user.builds.each do |b| %>
-		<%= link_to(b) do %>
-			<%= b.rim %>/<%= b.hub %><br>
-		<% end %>
-	<% end %>	
-
-<h3>My Ads</h3>
-  <% @user.classifieds.each do |c| %>
-    <%= link_to(c) do %>
-      <%= c.title %>/$<%= c.amount %>
-    <% end %>
-  <% end %>   
-
-<h3>My Messages</h3>
-
-  <% @user.posters.each do |poster| %>
-    <h4><%= poster.name %></h4>
-    <%= poster.message %>
-  <% end %>
- <!-- classified.poster.message  -->
-
+<div class="profile">
+  <h3>My Builds</h3>
+  	<% @user.builds.each do |b| %>
+  		<%= link_to(b) do %>
+  			<%= b.rim %>/<%= b.hub %><br>
+  		<% end %>
+  	<% end %>	
+</div>
+<br>
+<div class="profile">
+  <h3>My Ads</h3>
+    <% @user.classifieds.each do |c| %>
+      <%= link_to(c) do %>
+        <%= c.title %>/$<%= c.amount %>
+      <% end %>
+    <% end %>   
+</div>
+<br>
 <% if current_user == @user %>
+<div class="profile">
+  <div id="message">
+  <h3>My Messages</h3>
+    <% @user.posters.each do |poster| %>
+
+      From: <%= poster.name %><br>
+      Re: <%= poster.classified.title %><br>
+      <%= poster.message %><br>
+    <% end %>
+<% end %> 
+  </div>   
+</div>
+<br>
+<% if current_user == @user %>
+<div class="profile">
   <h3>My <%= @user.uploaded_photos.length %> Photos</h3>
   <div id="my-photos">
     <% @user.uploaded_photos.each do |p| %>
       <%= link_to image_tag(p.avatar_url(:large)), '/photos/#{photo.id}' %>
     <% end %>
   </div> 
-<% end %>
-
-
-<!--   <% Photo.recent(10).each do |photo|%>
-    <div id="photorecent">
-      <%=link_to image_tag(photo.avatar_url(:large)), "/photos/#{photo.id}" %>
-    </div>
-  <% end %> -->
+  <% end %>
+</div>
