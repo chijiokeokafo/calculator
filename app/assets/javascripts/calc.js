@@ -53,7 +53,7 @@ function extractBuild(form){
 };
 
 $(document).on('ready page:load', function(){
-	$( '#calculator' ).slideDown(2500).css('opacity', 0.3);
+	$( '#calculator' ).slideDown(900).css('opacity', 0.3);
 	$('#calculator').mouseenter(function(){
 		$(this).fadeTo('slow', 1);
 	});

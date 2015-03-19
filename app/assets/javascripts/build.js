@@ -8,13 +8,13 @@ $(document).on('ready page:load', function(){
 });
 
 $(document).on('ready page:load', function(){
-	$( '.specs' ).slideDown(2500).css('opacity', 0.3);
+	$( '.specs' ).slideDown(900).css('opacity', 0.3);
 	$('.specs').mouseenter(function(){
 		$(this).fadeTo('slow', 1);
 	});
 });
 
 $(document).on('ready page:load', function(){
-	$( '#links' ).slideDown(2500);
+	$( '#links' ).slideDown(900);
 });
 
