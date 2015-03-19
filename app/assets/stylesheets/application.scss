@@ -154,7 +154,7 @@ html, body {
 
 .profile {
 	border: 3px solid black;
-	border-radius: 10px
+	border-radius: 10px;
 }
 
 #classifieds {
@@ -163,6 +163,32 @@ html, body {
 	width: 400px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#home-specs {
+	width: 1000px;
+	background-color: #DCDCDC;
+	border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  // margin-right: auto;
+	// border: 3px solid black;
+
+}
+
+#photorecent {
+	width: 1000px;
+	background-color: #DCDCDC;
+	border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+	border: 3px solid black;
+
+}
+
+#photo-specs {
+	border: 3px solid black;
+	border-radius: 10px;
 }
 
 
