@@ -28,6 +28,7 @@ img.wheel {
 	height: 100px;
 	position: absolute;
 	left: 7px;
+	z-index: 1;
 	top: 0px;
 }
 
@@ -45,10 +46,11 @@ img.wheel {
 	position: absolute;
 	left: 100px;
 	bottom: 0;
+	z-index: 2;
 	font-family: 'Orbitron', sans-serif;
 }
 
-#nav {
+.navbar-inverse {
 	clear: both;
 	background: $navborder;
 	color: $nav-color;

@@ -1,8 +1,8 @@
 <h1>SHARE YOUR BUILDS</h1>
 
-<div id="links">
+<div class="links">
 	<p><%= link_to "Add a new build", "/builds/new" %></p>
-	<p><%= link_to "Calculate some Spokes!", "/calc" %></p>
+	<p><%= link_to "Quick Spoke Calculator", "/calc" %></p>
 	<div id="search-bar">
 	<h4>SEARCH ANY RIM OR HUB</h4>
 	<p><%= form_tag builds_path, method: :get, authentication: false, id: 'search-form' do %>

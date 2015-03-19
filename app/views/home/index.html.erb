@@ -1,7 +1,10 @@
-<h1 class="home_title"> Most recent photos posted by users </h1>
-
-	<% Photo.recent(10).each do |photo|%>
-	  <div id="photorecent">
-		  <%=link_to image_tag(photo.avatar_url(:large)), "/photos/#{photo.id}" %>
-    </div>
-	<% end %>
+<div class="container">
+	<div class="col-md-8">
+		<h1 id="home_title"> Most recent photos posted by users </h1>
+			<% Photo.recent(10).each do |photo|%>
+		  <div id="photorecent">
+			  <%=link_to image_tag(photo.avatar_url(:large)), "/photos/#{photo.id}" %>
+	    </div>
+		<% end %>
+	</div>
+</div>		
