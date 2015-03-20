@@ -7,7 +7,7 @@
   <% end %>
 </ul>
 <div id="photo-specs">	
-	<h3> <%= link_to "Add your memorable photo to our gallery!", new_photo_path %><br></h3>
+	<h3> <%= link_to "Upload to the gallery!", new_photo_path %><br></h3>
 	<div id="photos">
 	<% @photo.each do |photo| %>
 	  <%= link_to image_tag(photo.avatar_url(:medium)), photo_path(photo) %> 

@@ -39,7 +39,7 @@ load_and_authorize_resource
     if @photo.save
       redirect_to photo_url(@photo), notice: "photo has been uploaded"
     else 
-      flash.now[:alert] = "Some error occured, retry submitting the project" 
+      flash.now[:alert] = "Some error occured, retry submitting the photo" 
       render :new 
     end 
   end 
