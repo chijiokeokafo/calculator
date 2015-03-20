@@ -18,11 +18,11 @@
 </div>
 
   <nav class="navbar navbar-inverse">
-    <%= link_to 'Home', root_path, class: 'navbar-brand' %> 
-    <%= link_to "Calculator", "/calc", class: 'navbar-brand' %> 
-    <%= link_to 'Builds', builds_path, class: 'navbar-brand' %> 
-    <%= link_to 'Buy/Sell', classifieds_path, class: 'navbar-brand' %> 
-    <%= link_to 'Photos', photos_path, class: 'navbar-brand' %> 
+    <%= link_to 'Home', root_path, class: 'navbar-brand wheel-trigger' %> 
+    <%= link_to "Calculator", "/calc", class: 'navbar-brand wheel-trigger' %> 
+    <%= link_to 'Builds', builds_path, class: 'navbar-brand wheel-trigger' %> 
+    <%= link_to 'Buy/Sell', classifieds_path, class: 'navbar-brand wheel-trigger' %> 
+    <%= link_to 'Photos', photos_path, class: 'navbar-brand wheel-trigger' %> 
 
    <!--  <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
@@ -34,12 +34,12 @@
     
 
     <% if current_user %>
-     <%= link_to 'Profile', user_path(current_user.id), {class: 'navbar-brand'} %> 
+     <%= link_to 'Profile', user_path(current_user.id), {class: 'navbar-brand wheel-trigger'} %> 
        
-     <%= link_to 'Logout', :logout, class: 'navbar-brand', method: :post %>
+     <%= link_to 'Logout', :logout, class: 'navbar-brand wheel-trigger', method: :post %>
     <% else %> 
-     <%= link_to 'Register', new_user_path, {class: 'navbar-brand'} %> 
-     <%= link_to 'Login', :login, {class: 'navbar-brand'} %>
+     <%= link_to 'Register', new_user_path, {class: 'navbar-brand wheel-trigger'} %> 
+     <%= link_to 'Login', :login, {class: 'navbar-brand wheel-trigger'} %>
     <% end %>
   </nav>
 

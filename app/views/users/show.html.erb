@@ -33,7 +33,7 @@
 <br>
 <% if current_user == @user %>
 <div class="profile">
-  <h3>My <%= @user.uploaded_photos.length %> Photos</h3>
+  <h3>My <%= pluralize @user.uploaded_photos.length, "Photo" %> </h3>
   <div id="my-photos">
     <% @user.uploaded_photos.each do |p| %>
       <%= link_to image_tag(p.avatar_url(:large)), photo_path %> 
