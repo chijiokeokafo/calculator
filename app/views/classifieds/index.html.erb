@@ -14,13 +14,11 @@
   <%= submit_tag "Search" %>
 <% end %>
 
+<br>
 
-
+<div id="classifieds">
 <% if can? :create, Classified %>
   <h3><%= link_to "Create your ad", new_classified_path %></h3>
 <% end %>
-
-
-<div id="classifieds">
   <%= render @classifieds %>
 </div>

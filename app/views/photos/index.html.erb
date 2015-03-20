@@ -1,13 +1,15 @@
 <ul class="inline">
-  <li><%= link_to 'All', photos_path, class: 'btn btn-secondary wheel-trigger'  %></li>
+  <li><%= link_to 'All', photos_path, class: 'btn btn-secondary'  %></li>
   <% PhotoCategory.all.each do |category| %>
     <li>
-      <%= link_to category.name, photos_path(photo_category_id: category.id), class: 'btn btn-secondary wheel-trigger' %>
+      <%= link_to category.name, photos_path(photo_category_id: category.id), class: 'btn btn-secondary' %>
     </li>
   <% end %>
 </ul>
 <div id="photo-specs">	
+<% if can? :create, Photo %>
 	<h3> <%= link_to "Add your memorable photo to our gallery!", new_photo_path %><br></h3>
+<% end %>
 	<div id="photos">
 	<% @photo.each do |photo| %>
 	  <%= link_to image_tag(photo.avatar_url(:medium)), photo_path(photo) %> 
