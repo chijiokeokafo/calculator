@@ -8,10 +8,10 @@
 </ul>
 <div id="photo-specs">	
 
-	<h3> <%= link_to "Upload to the gallery!", new_photo_path %><br></h3>
+
 
 <% if can? :create, Photo %>
-	<h3> <%= link_to "Add your memorable photo to our gallery!", new_photo_path %><br></h3>
+	<h3> <%= link_to "Upload to the gallery!", new_photo_path %><br></h3>
 <% end %>
 
 	<div id="photos">
