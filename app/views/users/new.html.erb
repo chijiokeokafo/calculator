@@ -1,45 +1,47 @@
-<h1>Sign Up!</h1>
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h3>
-        Whoops!
-        <%= pluralize(@user.errors.count, "error")%>
-        prohibited you from creating an account:
-      </h3>
-      <ul>
-        <% @user.errors.full_messages.each do |message|%>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-    <% end %>
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="field">
-        <%= f.label :profile_image, "Your photo(optional)" %>
-        <%= f.file_field :profile_image %>
-        <%= f.hidden_field :profile_image_cache %>
+ <div id="sign-up">
+  <h1>Sign Up!</h1>
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h3>
+          Whoops!
+          <%= pluralize(@user.errors.count, "error")%>
+          prohibited you from creating an account:
+        </h3>
+        <ul>
+          <% @user.errors.full_messages.each do |message|%>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
       </div>
-  <div class="actions">
-    <%= f.submit "Sign Me Up!"%>
-  </div>
-<% end %>
+      <% end %>
+    <div class="field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <div class="field">
+          <%= f.label :profile_image, "Your photo(optional)" %>
+          <%= f.file_field :profile_image %>
+          <%= f.hidden_field :profile_image_cache %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Sign Me Up!"%>
+    </div>
+  <% end %>
+</div>    
