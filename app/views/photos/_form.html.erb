@@ -15,8 +15,9 @@
           </ul>
           </div>
           <% end %>
+      <div class="align">
         <div class="field">
-          <%= f.label :name %>
+          <%= f.label :name %><br>
           <%= f.text_field :name %>
         </div>
         <div class = "field">
@@ -31,8 +32,8 @@
           <%= f.label :avatar, "Your photo" %>
           <%= f.file_field :avatar %>
           <%= f.hidden_field :avatar_cache %>
-        </div>
-          <%= f.submit :submit, class: 'button' %>
+        </div><br>
+         <center> <%= f.submit :submit, class: 'button' %></center><br>
         <% end %>
-
+</div>
 </div>
