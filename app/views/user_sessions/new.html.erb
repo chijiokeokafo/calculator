@@ -2,24 +2,22 @@
   <h1>Login!</h1>
 
   <%= form_tag user_sessions_path, :method => :post do %>
+    <div class="align">
     <div class="field">
-      <%= label_tag :email %>
+      <%= label_tag :email %><br>
       <%= text_field_tag :email %>
     </div>
     <div class="field">
       <%= label_tag :password %>
       <%= password_field_tag :password %>
-    </div>
-
-    <div class="field">   
-      <%= check_box_tag :remember %>
-      <%= label_tag :remember, 'Remember me for two weeks' %>
+    </div><br>
+    <div class="field">  
+      <%= check_box_tag :remember %><%= label_tag :remember, 'Remember me for two weeks', :class=>"change" %>
     </div>
 
     <div class="actions">
       <%= submit_tag "Login"%>  
     </div>
   <% end %>
-
-  <%= link_to "Back", root_path %>
 </div>  
+</div>

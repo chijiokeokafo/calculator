@@ -102,7 +102,7 @@ body{
 	}
 
 	a:hover {
-		color: $orange;
+		color: $orange !important;
 	}
 }
 
@@ -229,4 +229,33 @@ html, body {
 	width: 400px;
 	margin-left: auto;
   margin-right: auto;
+}
+
+// file upload fix
+.align {
+	text-align: left;
+	width: 50%;
+	display: block;
+	// box-sizing: border-box;
+	// border: red solid 1px;
+	margin: 0 auto;
+	
+	label {
+		margin: 10px 0 0px 0;
+	}
+
+	.actions {
+		margin: 20px 0;
+	}
+
+#remember {
+	float: left;
+}
+
+.change {
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 }

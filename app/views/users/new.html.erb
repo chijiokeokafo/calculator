@@ -15,6 +15,7 @@
         </ul>
       </div>
       <% end %>
+  <div class="align">
     <div class="field">
       <%= f.label :first_name %>
       <%= f.text_field :first_name %>
@@ -24,7 +25,7 @@
       <%= f.text_field :last_name %>
     </div>
     <div class="field">
-      <%= f.label :email %>
+      <%= f.label :email %><Br>
       <%= f.text_field :email %>
     </div>
     <div class="field">
@@ -37,11 +38,13 @@
     </div>
     <div class="field">
           <%= f.label :profile_image, "Your photo(optional)" %>
-          <%= f.file_field :profile_image %>
+          <%= f.file_field :profile_image, :class=>"center" %>
           <%= f.hidden_field :profile_image_cache %>
     </div>
     <div class="actions">
       <%= f.submit "Sign Me Up!"%>
     </div>
+  </div>
+    
   <% end %>
 </div>    
