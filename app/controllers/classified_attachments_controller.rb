@@ -11,7 +11,7 @@ def new
 end
 
 def create
-   @classified = Classified.new(classified_params)
+  @classified = Classified.new(classified_params)
 
    respond_to do |format|
      if @classified.save
@@ -23,9 +23,9 @@ def create
        format.html { render action: 'new' }
      end
    end
- end
+end
 
- def update
+def update
    respond_to do |format|
      if @classified.update(classified_params)
        params[:classified_attachments]['picture'].each do |a|
@@ -33,6 +33,7 @@ def create
        end
      end
   end
+end  
 
   def destroy
     @classified.destroy
