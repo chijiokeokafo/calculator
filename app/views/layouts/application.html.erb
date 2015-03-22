@@ -24,15 +24,6 @@
     <%= link_to 'Buy/Sell', classifieds_path, class: 'navbar-brand wheel-trigger' %> 
     <%= link_to 'Gallery', photos_path, class: 'navbar-brand wheel-trigger' %> 
 
-   <!--  <form class="navbar-form navbar-left" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
-     -->
-    
-
     <% if current_user %>
      <%= link_to 'Profile', user_path(current_user.id), {class: 'navbar-brand wheel-trigger'} %> 
        
@@ -42,24 +33,6 @@
      <%= link_to 'Login', :login, {class: 'navbar-brand wheel-trigger'} %>
     <% end %>
   </nav>
-
-  <!-- <nav id="nav">
-    <%= link_to 'Home', root_path %> |
-    <%= link_to 'Classified', classifieds_path %> |
-    <%= link_to 'Photos', photos_path %> |
-    <%= link_to "Calculator", "/calc" %> |
-    <%= link_to 'Builds', builds_path %> |
-
-    <% if current_user %>
-     <%= link_to 'Profile', user_path(current_user.id) %> |
-       
-     <%= link_to 'Logout', :logout, method: :post %>
-    <% else %> 
-     <%= link_to 'Register', new_user_path %> |
-     <%= link_to 'Login', :login %>
-    <% end %>
-  </nav> -->
-
 
   <div>
       <p id="notice"><%= flash[:notice] %></p>
