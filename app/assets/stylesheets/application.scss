@@ -144,12 +144,16 @@ html, body {
   display: block;
 }
 
-.site-footer, .page-wrap:after {
-  height: 5em; 
-}
+// .site-footer, .page-wrap:after {
+//   height: 5em; 
+// }
 
 .site-footer {
   background: #939393;
+	h1 { font-size: 10pt; }
+	.details { font-size: 8pt; }
+  // background-image: image-url("metal.jpeg");
+  // background-repeat: repeat;
 }
 
 .profile {
@@ -230,3 +234,4 @@ html, body {
 	margin-left: auto;
   margin-right: auto;
 }
+
