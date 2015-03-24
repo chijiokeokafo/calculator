@@ -14,11 +14,10 @@ I'm located in <strong><%= @classified.city.capitalize %></strong><br>
   <%= image_tag p.picture_url, :size => "150x150" %>
 <% end %><br>
 
-
- <% if can? :update, @classified %>
-
 <div id="map-canvas" data-latitude="<%= @classified.latitude.to_f %>" data-longitude="<%= @classified.longitude.to_f %>"></div>
 
+
+ <% if can? :update, @classified %>
 
 <%= link_to 'Edit', edit_classified_path(@classified) %> |
 <% end %> 
