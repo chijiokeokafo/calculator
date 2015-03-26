@@ -1,0 +1,25 @@
+<div id="post_content">
+  <h1><%= @post.title %></h1>
+  <p><%= @post.content %></p>
+
+   <!-- if can? :update, @post  -->
+    <%= link_to "Edit", edit_post_path(@post) %> 
+ <!-- end  -->
+<!-- if can? :destroy, @post %> -->
+    <%= link_to "Delete", post_path(@post), data: {confirm: "Are you sure you want to delete this post?"}, :method => :delete %>  
+ <!-- end %> -->
+
+<br><br>
+
+  <div class="commentsagain">
+  <h5> <%= pluralize @post.comments.count, "Comment" %> </h5>
+    <%= render @post.comments %>  
+    </div><br>
+
+    <%= render "comments/form" %>
+  
+</div>
+
+
+ 
+

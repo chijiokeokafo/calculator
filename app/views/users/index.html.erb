@@ -1,1 +1,11 @@
-index.html.erb
+<h4> Users </h4>
+
+<div id="users"><br>
+  <% @users.each do |user| %>
+    <%= image_tag user.profile_image_url(:thumb) %> 
+    Name: <%= user.first_name %> <%= user.last_name %>
+    <%= user.email %>
+    About me: <%= user.about %>
+    <% end %><br><br>
+  </div>
+  <br>

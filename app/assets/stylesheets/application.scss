@@ -34,7 +34,7 @@ body{
 	background: rgb(169, 179, 186);
 	margin-bottom: 1em;
 }
-  
+
 
 .wheel {
 	width: 100px;
@@ -50,10 +50,10 @@ body{
 	transform: rotateZ(0);
 
 	.img-container.is-rolling & {
-	  -webkit-transform: rotateZ(7200deg);
-	  -moz-transform: rotateZ(7200deg);
-	  -o-transform: rotateZ(7200deg);
-	  transform: rotateZ(7200deg);
+		-webkit-transform: rotateZ(7200deg);
+		-moz-transform: rotateZ(7200deg);
+		-o-transform: rotateZ(7200deg);
+		transform: rotateZ(7200deg);
 	}
 }
 
@@ -71,10 +71,10 @@ body{
 	transform: translateX(0);
 
 	&.is-rolling {
-	  -webkit-transform: translateX(100%);
-	  -moz-transform: translateX(100%);
-	  -o-transform: translateX(100%);
-	  transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+		-moz-transform: translateX(100%);
+		-o-transform: translateX(100%);
+		transform: translateX(100%);
 	}
 }
 
@@ -133,18 +133,18 @@ h1, h2, h3, h4, h5, h6{
 
 
 html, body {
-  height: 100%;
+	height: 100%;
 }
 
 .page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -5em; 
+	min-height: 100%;
+	/* equal to footer height */
+	margin-bottom: -5em; 
 }
 
 .page-wrap:after {
-  content: "";
-  display: block;
+	content: "";
+	display: block;
 }
 
 // .site-footer, .page-wrap:after {
@@ -157,6 +157,13 @@ html, body {
 	.details { font-size: 8pt; }
   // background-image: image-url("metal.jpeg");
   // background-repeat: repeat;
+
+.site-footer, .page-wrap:after {
+	height: 5em; 
+}
+
+.site-footer {
+	background: #939393;
 }
 
 .profile {
@@ -176,8 +183,8 @@ html, body {
 	width: 1000px;
 	background-color: #DCDCDC;
 	border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
   // margin-right: auto;
 	// border: 3px solid black;
 
@@ -187,8 +194,8 @@ html, body {
 	width: 1000px;
 	background-color: #DCDCDC;
 	border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 	border: 3px solid black;
 
 }
@@ -211,7 +218,7 @@ html, body {
 	border-radius: 10px;
 	width: 400px;
 	margin-left: auto;
-  margin-right: auto;
+	margin-right: auto;
 }
 
 #login {
@@ -219,7 +226,7 @@ html, body {
 	border-radius: 10px;
 	width: 400px;
 	margin-left: auto;
-  margin-right: auto;
+	margin-right: auto;
 }
 
 #new-ad {
@@ -227,7 +234,7 @@ html, body {
 	border-radius: 10px;
 	width: 400px;
 	margin-left: auto;
-  margin-right: auto;
+	margin-right: auto;
 }
 
 .comments {
@@ -235,7 +242,7 @@ html, body {
 	border-radius: 10px;
 	width: 400px;
 	margin-left: auto;
-  margin-right: auto;
+	margin-right: auto;
 }
 
 // file upload fix
@@ -274,3 +281,9 @@ html, body {
 .services {
 	margin-bottom: 5px;
 }
+
+#users {
+	border: 3px solid black;
+	border-radius: 10px;
+}
+
