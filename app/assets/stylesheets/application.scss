@@ -14,7 +14,10 @@ $nav-color: white;
 $navborder: black;
 
 body{
-	background: $light-grey;
+	// background: $light-grey;
+	background-image: image-url('back.jpeg');
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 
@@ -262,4 +265,12 @@ html, body {
 		margin-right: auto;
 	}
 
+}
+
+.about-us {
+	margin-bottom: 5px;
+}
+
+.services {
+	margin-bottom: 5px;
 }

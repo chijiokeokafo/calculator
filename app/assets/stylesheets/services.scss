@@ -1,0 +1,57 @@
+#company {
+	background: #F69B32;
+	border-radius: 3px;
+	margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 100px;
+  h4 {
+  	  font-weight: bold;
+  }
+  p{
+  	text-align: left;
+  	padding-left: 50px;
+  	padding-right: 50px;
+  	font-size: 13px;
+  	color: black;
+  }
+}
+
+#hours {
+	background: white;
+	border-radius: 3px;
+	margin-left: 400px;
+  margin-right: 390px;
+  margin-top: 100px;
+  text-align: center;
+  p{
+  	text-align: left;
+  	padding-left: 215px;
+		padding-right: 200px;
+		color: #F69B32;
+  }
+}
+
+#address {
+	background: white;
+	border-radius: 3px;
+	margin-left: 400px;
+  margin-right: 390px;
+  margin-top: 100px;
+  text-align: center;
+  p {
+  	color: #F69B32;
+  }
+}
+
+#map { 
+	background: white;
+	border-radius: 3px;
+	margin-left: 400px;
+  margin-right: 390px;
+  margin-top: 100px;
+  text-align: center;
+  a{
+  	color: #F69B32;
+  }
+  
+}
