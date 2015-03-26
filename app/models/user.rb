@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :builds
 
   has_many :likes
+  has_many :posts
+  has_many :comments
 
   authenticates_with_sorcery!
 
