@@ -18,6 +18,11 @@ Rails.application.routes.draw do
   resources :photo_categories
   resources :classified_categories
 
+  get 'hours'  => 'services#hours', as: :hours
+  get 'about' => 'services#about', as: :about
+  get 'site_map' => 'services#site_map', as: :site_map
+  get 'contact' => 'services#contact', as: :contact
+
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 

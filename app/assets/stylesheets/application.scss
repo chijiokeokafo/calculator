@@ -14,7 +14,10 @@ $nav-color: white;
 $navborder: black;
 
 body{
-	background: $light-grey;
+	// background: $light-grey;
+	background-image: image-url('back.jpeg');
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 
@@ -144,12 +147,16 @@ html, body {
   display: block;
 }
 
-.site-footer, .page-wrap:after {
-  height: 5em; 
-}
+// .site-footer, .page-wrap:after {
+//   height: 5em; 
+// }
 
 .site-footer {
   background: #939393;
+	h1 { font-size: 10pt; }
+	.details { font-size: 8pt; }
+  // background-image: image-url("metal.jpeg");
+  // background-repeat: repeat;
 }
 
 .profile {
@@ -248,14 +255,22 @@ html, body {
 		margin: 20px 0;
 	}
 
-#remember {
-	float: left;
+	#remember {
+		float: left;
+	}
+
+	.change {
+		display: inline;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 }
 
-.change {
-	display: inline;
-	margin-left: auto;
-	margin-right: auto;
+.about-us {
+	margin-bottom: 5px;
 }
 
+.services {
+	margin-bottom: 5px;
 }
