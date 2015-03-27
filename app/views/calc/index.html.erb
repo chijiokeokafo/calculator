@@ -1,5 +1,7 @@
+<div class="calc-color">
 <h1>SPOKES AINT NO JOKES</h1>
-<div id="calculator">
+</div>
+<div id="calculator"><br>
 	<%= form_tag({}, {id: 'spoke-form'}) do %>
 		<p><%= text_field_tag(:erd, nil, class: 'calc_field', placeholder: 'ERD' ) %></p>
 		<p><%= text_field_tag(:flange_diam, nil, class: 'calc_field', placeholder: 'Flange ø' ) %></p>
@@ -8,7 +10,7 @@
 		<p><%= text_field_tag(:spoke_crosses, nil, class: 'calc_field', placeholder: 'Crosses' ) %></p>
 		<p><%= text_field_tag(:spoke_hole_diam, nil, class: 'calc_field', placeholder: 'Spoke ø (eg: 2.5)') %>
 		<p><%= submit_tag "Calculate", id: "button" %></p>
-	<% end %>
+	<% end %><br>
 </div>
 
 <div id="spokemodal">
