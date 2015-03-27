@@ -164,10 +164,20 @@ html, body {
 
 .site-footer {
   background: #939393;
-	h1 { font-size: 10pt; }
-	.details { font-size: 8pt; }
+  padding-bottom: 110px;
+		h1 {
+		 font-size: 10pt; 
+		 // padding-left: 20px;
+		}
+		h1 {
+			font-family: sans-serif;
+		}
+		.details { 
+		font-size: 8pt; 
+	}
   // background-image: image-url("metal.jpeg");
   // background-repeat: repeat;
+}
 
 .site-footer, .page-wrap:after {
 	height: 5em; 
@@ -182,13 +192,6 @@ html, body {
 	border-radius: 10px;
 }
 
-#classifieds {
-	border: 3px solid black;
-	border-radius: 10px;
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 #home-specs {
 	width: 1000px;
@@ -248,13 +251,6 @@ html, body {
 	margin-right: auto;
 }
 
-.comments {
-	border: 3px solid black;
-	border-radius: 10px;
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 // file upload fix
 .align {
@@ -298,3 +294,6 @@ html, body {
 	border-radius: 10px;
 }
 
+.row {
+
+}

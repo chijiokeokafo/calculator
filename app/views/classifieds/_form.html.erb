@@ -1,5 +1,8 @@
+<div id="title-ad">
+  <h1>New Ad</h1>
+</div>
+
 <div id="new-ad">
-<h1>New Ad</h1>
   <%= form_for(@classified, html: { multipart: true }) do |f|%>
       <% if @classified.errors.any? %>
         <div id="error_explanation">
@@ -22,7 +25,7 @@
         <%= f.label :description %>
         <%= f.text_field :description %>
       </div>
-      <div>
+      <div><br>
       <strong>Choose category</strong>
       <%= collection_select(:classified, :classified_category_id, ClassifiedCategory.all, :id, :name, prompt: true) %>
       </div>

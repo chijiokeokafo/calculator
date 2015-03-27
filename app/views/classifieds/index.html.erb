@@ -8,11 +8,18 @@
   <% end %>
 </ul>
 
+<br>
+<div class="buy-sell">
+<h1> Buy/Sell</h1>
+</div>
+
 <!-- search -->
+<div id="search-button">
 <%= form_tag classifieds_path, method: :get, authentication: false, id: 'search-form' do %>
   <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
+  <%= submit_tag "Search", class: 'button' %>
 <% end %>
+</div>
 
 <br>
 
@@ -20,5 +27,7 @@
 <% if can? :create, Classified %>
   <h3><%= link_to "Create your ad", new_classified_path %></h3>
 <% end %>
+</div><br>
+
+
   <%= render @classifieds %>
-</div>

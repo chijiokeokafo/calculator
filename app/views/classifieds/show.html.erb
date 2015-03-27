@@ -1,34 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @classified.title.capitalize %>
-</p>
-<strong>Description:</strong> <br><%= @classified.description.capitalize %><br>
-<strong>Price:</strong><br> <%= number_to_currency(@classified.amount) %> <br>
-I'm located in <strong><%= @classified.city.capitalize %></strong><br>
+<p id="title-picture">
+  <strong>Title:</strong> <%= @classified.title.capitalize %><br>
+  <strong>Description:</strong><%= @classified.description.capitalize %><br>
+  <strong>Price:</strong><%= number_to_currency(@classified.amount) %> <br>
+  I'm located in <strong><%= @classified.city.capitalize %></strong><br>
+</p><br>
 
- <%= image_tag @classified.image_url(:large)%>
+<!-- image one -->
+ <%= image_tag @classified.image_url(:large)%><br><br>
 
+<!-- multiple images -->
 <% @classified_attachments.each do |p| %>
   <%= image_tag p.picture_url, :size => "150x150" %>
-<% end %><br>
+<% end %><br><br>
 
-<div id="map-canvas" data-latitude="<%= @classified.latitude.to_f %>" data-longitude="<%= @classified.longitude.to_f %>"></div>
+<div id="map-canvas" data-latitude="<%= @classified.latitude.to_f %>" data-longitude="<%= @classified.longitude.to_f %>"></div><br>
 
-
- <% if can? :update, @classified %>
-
-<%= link_to 'Edit', edit_classified_path(@classified) %> |
+<div class="edit-delete-buttons">
+<% if can? :update, @classified %>
+  <%= link_to 'Edit', edit_classified_path(@classified) %> 
 <% end %> 
 
 <% if can? :destroy, @classified %>
-<%= link_to "Delete", @classified, method: :delete, data: {confirm: "Are you sure you want to delete this picture?"} %> |
-<% end %>
+  <%= link_to "Delete", @classified, method: :delete, data: {confirm: "Are you sure you want to delete this picture?"} %> 
+<% end %><br><br>
+</div>
 
-<%= link_to 'Back', classifieds_path %>
-
-<div class="comments">
+<div id="comments"><br>
   <% if current_user %>
     <h4>Leave your reply to my post here</h4>
 
@@ -54,10 +53,10 @@ I'm located in <strong><%= @classified.city.capitalize %></strong><br>
       <div class="field">
         <%= f.label :message %><br />
         <%= f.text_area :message %>
-      </div>
+      </div><br>
       <div class="actions">
-        <%= f.submit "Send Email" %>
-      </div>
+        <%= f.submit "Send Email", class: 'button' %>
+      </div><br>
     <% end %>
 
     <% end %>
