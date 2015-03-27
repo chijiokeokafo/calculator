@@ -31,6 +31,8 @@
     <% else %> 
      <%= link_to 'Register', new_user_path, {class: 'navbar-brand wheel-trigger'} %> 
      <%= link_to 'Login', :login, {class: 'navbar-brand wheel-trigger'} %>
+     <%= link_to 'Login with GitHub', auth_at_provider_path(:provider => :github) %>
+
     <% end %>
   </nav>
 
