@@ -10,8 +10,8 @@ $dark-grey: #939393;
 $darkest-grey: darken($dark-grey, 20%);
 $orange: #F69B32;
 
-$nav-color: white;
-$navborder: black;
+$nav-color: black;
+$navborder: #F69B32;
 
 body{
 	// background: $light-grey;
@@ -86,6 +86,12 @@ body{
 	left: 100px;
 	bottom: 0;
 	font-family: 'Orbitron', sans-serif;
+	h1 {
+		color: orange;
+		font-style: italic;
+		text-shadow: -1px 1px black, 2px 3px black, 5px 1px black, 0 -1px black;
+		font-size: 50px;
+	}
 }
 
 .navbar-inverse {
@@ -100,12 +106,14 @@ body{
 
 
 	a {
-		text-decoration: underline;
-		color: $nav-color;
+		text-decoration: none;
+		font-weight: bold;
+		font-family: 'Orbitron', sans-serif;
+		color: black !important;
 	}
 
 	a:hover {
-		color: $orange !important;
+		color: $dark-grey !important;
 	}
 }
 
@@ -129,6 +137,9 @@ body{
 
 h1, h2, h3, h4, h5, h6{
 	color: black;
+	font-weight: bold;
+	font-family: 'Orbitron', sans-serif;
+
 }
 
 
