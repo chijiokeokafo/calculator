@@ -22,6 +22,10 @@ Rails.application.routes.draw do
   resources :photo_categories
   resources :classified_categories
 
+  post "oauth/callback" => "oauths#callback"
+  get "oauth/callback" => "oauths#callback" # for use with Github, Facebook
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
   get 'hours'  => 'services#hours', as: :hours
   get 'about' => 'services#about', as: :about
   get 'site_map' => 'services#site_map', as: :site_map
@@ -33,9 +37,4 @@ Rails.application.routes.draw do
   # root 'builds#index'
   resources :calc 
   resources :builds
-
-post "oauth/callback" => "oauths#callback"
-get "oauth/callback" => "oauths#callback" # for use with Github, Facebook
-get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
-
 end

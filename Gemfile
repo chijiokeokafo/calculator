@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #authentication and authorization 
 gem "sorcery"
 gem 'cancancan', '~> 1.10'
+gem 'omniauth', '~> 1.2.2'
 
 #mailer gem
 gem "actionmailer"
