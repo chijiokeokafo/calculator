@@ -39,3 +39,48 @@ h3 {
 		color: #F69B32;
 	}
 }
+
+#sign-up {
+	background-color: #DCDCDC;
+	.actions {
+		input {
+			box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+		  color: #333;
+		  background-color: #DCDCDC;
+		  border-radius: 5px;
+		  border: 2px solid black;
+		  font-size: 16px;
+		  font-weight: 700;
+		  height: 32px;
+		  padding: 4px 16px;
+		}
+		width: auto;
+    text-align: center;
+	}
+	h1 {
+		color: #F69B32;
+	}
+}
+
+#login {
+background-color: #DCDCDC;
+	.actions {
+		input {
+			box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+		  color: #333;
+		  background-color: #DCDCDC;
+		  border-radius: 5px;
+		  border: 2px solid black;
+		  font-size: 16px;
+		  font-weight: 700;
+		  height: 32px;
+		  padding: 4px 16px;
+		}
+		width: auto;
+    text-align: center;
+	}
+	h1 {
+		color: #F69B32;
+	}
+}
+

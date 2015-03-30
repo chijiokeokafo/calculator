@@ -4,17 +4,14 @@
 
 <div id="posts">
 <% @posts.each do |post| %>
-  <div class="post">
   <h2 class="titl"> <%= link_to post.title, post %></h2>
   <p class="date"> Published at 
      <%= time_ago_in_words(post.created_at) %> ago by   
      <%= post.user.email %></p>      
-<% end %>
-  </div>
-</div><br>
-
+<% end %><br>
 <div class="buttonagain">
  <% if can? :create, Post %>
 <%= link_to "New post", new_post_path %>
  <% end %> 
  </div>
+</div>
