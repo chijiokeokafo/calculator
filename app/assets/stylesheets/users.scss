@@ -1,3 +1,41 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user {
+	h1 {
+		color: #F69B32;
+	}
+}
+
+hr {
+		border-top: 1px solid #397CAC;
+	}
+
+.user-build {
+	h3 {
+		color: #F69B32;
+	}
+}
+
+.user-ad {
+h3 {
+		color: #F69B32;
+	}
+
+}
+
+.user-message {
+	#message {
+		color: #397CAC;
+	}
+h3 {
+		color: #F69B32;
+	}
+}
+
+.user-photo {
+	h3 {
+		color: #F69B32;
+	}
+}

@@ -14,10 +14,10 @@ $nav-color: black;
 $navborder: #F69B32;
 
 body{
-	// background: $light-grey;
-	background-image: image-url('back.jpeg');
+	// background: black;
+	background-image: image-url('trial.jpg');
 	background-size: 100%;
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 }
 
 
@@ -101,17 +101,13 @@ body{
 	border-bottom: 1px solid $navborder;
 	font-size: 12pt;
 	padding-left: 19px;
-	text-align: left;
-
-
-
+	// text-align: right !important;
 	a {
 		text-decoration: none;
 		font-weight: bold;
 		font-family: 'Orbitron', sans-serif;
 		color: black !important;
 	}
-
 	a:hover {
 		color: $dark-grey !important;
 	}
@@ -130,7 +126,8 @@ body{
 		border-radius: 0.5em;
 		background-color: $orange;
 		border: darken($orange, 50%);
-		color: $nav-color;
+		color: #337ab7;
+		font-weight: bold;
 	}
 	list-style-type: none;
 }

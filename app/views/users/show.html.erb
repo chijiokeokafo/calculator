@@ -1,16 +1,20 @@
-<h3><%= @user.first_name.capitalize %>'s Profile </h3>
+<div class="user">
+<h1><%= @user.first_name.capitalize %>'s Profile </h1>
+</div>
 
+<div class="user-build">
 <%= image_tag @user.profile_image_url(:thumb) %><br>
-<div class="profile">
   <h3>My Builds</h3>
   	<% @user.builds.each do |b| %>
   		<%= link_to(b) do %>
   			<%= b.rim %>/<%= b.hub %><br>
   		<% end %>
   	<% end %>	
-</div>
+    </div>
 <br>
-<div class="profile">
+<hr>
+
+<div class="user-ad">
   <h3>My Ads</h3>
     <% @user.created_classifieds.each do |c| %>
       <%= link_to(c) do %>
@@ -19,8 +23,10 @@
     <% end %>   
 </div>
 <br>
+<hr>
+
 <% if current_user == @user %>
-<div class="profile">
+<div class="user-message">
   <div id="message">
   <h3>My Messages</h3>
     <% @user.posters.each do |poster| %>
@@ -31,8 +37,10 @@
   </div>   
 </div>
 <br>
+<hr>
+
 <% if current_user == @user %>
-<div class="profile">
+<div class="user-photo">
   <h3>My <%= pluralize @user.uploaded_photos.length, "Photo" %> </h3>
   <div id="my-photos">
     <% @user.uploaded_photos.each do |p| %>
@@ -40,4 +48,4 @@
     <% end %>
   </div> 
   <% end %>
-</div>
+</div><br>

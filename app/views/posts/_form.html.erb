@@ -1,5 +1,10 @@
+<div class="forum">
+	<h1> Forum Reply </h1>
+</div>
+
 
 <%= form_for @post do |f| %>
+<div id="forum-box"><br>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -9,5 +14,5 @@
     <%= f.text_area :content %>
   </div><br>
     <%= f.submit :submit, class: 'button' %><br>
-<% end %>
-
+<% end %><br>
+</div>

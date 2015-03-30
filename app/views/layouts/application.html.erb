@@ -27,7 +27,7 @@
     <%= link_to 'Builds', builds_path, class: 'navbar-brand wheel-trigger' %> 
     <%= link_to 'Buy/Sell', classifieds_path, class: 'navbar-brand wheel-trigger' %> 
     <%= link_to 'Gallery', photos_path, class: 'navbar-brand wheel-trigger' %> 
-    <%= link_to 'Users', users_path, class: 'navbar-brand wheel-trigger' %>
+   <!-- link_to 'Users', users_path, class: 'navbar-brand wheel-trigger' %> -->
     <%= link_to 'Forum', posts_path, class: 'navbar-brand wheel-trigger' %>
 
 
@@ -39,15 +39,16 @@
 </form>
      -->
 
-
+<div class="logout">
     <% if current_user %>
      <%= link_to 'Profile', user_path(current_user.id), {class: 'navbar-brand wheel-trigger'} %> 
        
-     <%= link_to 'Logout', :logout, class: 'navbar-brand wheel-trigger', method: :post %>
+    <left><%= link_to 'Logout', :logout, class: 'navbar-brand wheel-trigger pull-right', method: :post %> </left>
     <% else %> 
-     <%= link_to 'Register', new_user_path, {class: 'navbar-brand wheel-trigger'} %> 
-     <%= link_to 'Login', :login, {class: 'navbar-brand wheel-trigger'} %>
+     <%= link_to 'Register', new_user_path, {class: 'navbar-brand wheel-trigger pull-right'} %> 
+     <%= link_to 'Login', :login, {class: 'navbar-brand wheel-trigger pull-right'} %>
     <% end %>
+  </div>
   </nav>
 
   <div>

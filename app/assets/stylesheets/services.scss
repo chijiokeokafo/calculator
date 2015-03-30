@@ -1,11 +1,12 @@
 #company {
-	background: #F69B32;
+	background: #DCDCDC;
 	border-radius: 3px;
 	margin-left: 200px;
   margin-right: 200px;
   margin-top: 100px;
   h4 {
   	  font-weight: bold;
+      color: #F69B32;
   }
   p{
   	text-align: left;
@@ -17,41 +18,53 @@
 }
 
 #hours {
-	background: white;
+	background: #DCDCDC;
 	border-radius: 3px;
 	margin-left: 400px;
   margin-right: 390px;
   margin-top: 100px;
   text-align: center;
+  h4 {
+    color: #F69B32;
+  }
   p{
   	text-align: left;
   	padding-left: 215px;
 		padding-right: 200px;
-		color: #F69B32;
+		color: black;
   }
 }
 
 #address {
-	background: white;
+	background: #DCDCDC;
 	border-radius: 3px;
 	margin-left: 400px;
   margin-right: 390px;
   margin-top: 100px;
   text-align: center;
   p {
-  	color: #F69B32;
+  	color: black;
+  }
+  h4 {
+    color: black; 
+  }
+  h5 {
+      color: #F69B32;
   }
 }
 
 #map { 
-	background: white;
+	background: #DCDCDC;
 	border-radius: 3px;
 	margin-left: 400px;
   margin-right: 390px;
   margin-top: 100px;
   text-align: center;
+  h4 {
+    color: #F69B32;
+  }
   a{
-  	color: #F69B32;
+  	color: black;
   }
   
 }

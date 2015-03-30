@@ -1,3 +1,7 @@
+<div class="forum">
+	<h1>Forum </h1> 
+</div>
+
 <div id="posts">
 <% @posts.each do |post| %>
   <div class="post">
@@ -7,7 +11,7 @@
      <%= post.user.email %></p>      
 <% end %>
   </div>
-</div>
+</div><br>
 
 <div class="buttonagain">
  <% if can? :create, Post %>

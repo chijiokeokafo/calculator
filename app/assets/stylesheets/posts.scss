@@ -1,11 +1,16 @@
+.forum {
+  h1{
+  color: #F69B32; 
+  }
+}
+
 #posts {
-  background: white;
+  background: #DCDCDC;
   padding: 2em 5%;
   border-radius: .5em;
-  .post {
-      margin: 1em 0;
-      padding: 1em 0;
-      // border-top: 1px solid #D1d1d1;
+  margin-left: 200px;
+  margin-right: 200px;
+  border: 3px solid black;
       // border-bottom: 1px solid #D1d1d1;
       .titl {
         margin: 0;
@@ -19,14 +24,14 @@
     .date {
         margin-top: .25rem;
         font-size: 1.4rem;
-        color: #B2BAC2;
+        color: black;
     }
-  }
 }
 
-.buttonagain{
-  box-shadow: rgba(0,0,0,0.2) 0 1px 0 0;
-  color: #333;
+.buttonagain { 
+  a {
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+  color: #337ab7;
   background-color: #DCDCDC;
   border-radius: 5px;
   border: 2px solid black;
@@ -38,12 +43,10 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  }
 }
 
-#post_content {
-  background: white;
-  padding: 2em 5%;
-  border-radius: 0.5;
+#post_content { 
   a{
     color: #397CAC;
     border: 1px solid #397CAC;
@@ -54,27 +57,84 @@
   h1 {
     font-weight: 100;
     font-size: 2em;
-    color: #397CAC;
+    color: #F69B32;
     margin-top: 0;
-  }
-  .commentsagain {
-    border-top: 1px solid #D1d1d1;
-    p{
-      margin-top: .25rem;
-      font-size: 1.4rem;
-      color: #B2BAC2;
     }
-    .comment-buttons{
-      a{
-      color: #397CAC;
-      border: 1px solid #397CAC;
-      padding: 0.3em 0.8em;
-      border-radius: 0.2em;
-      text-decoration: none;
-      }
-    } 
-  }
+  p {
+     color: #397CAC;
+    }
 }
 
+.commentsagain {
+    h5 {
+      color: #F69B32;
+    }
+  }
 
+
+  .comment {
+    color: #397CAC;
+    p {
+      color: #F69B32;
+    }
+    hr {
+      border-top: 1px solid #397CAC; 
+    } 
+  }
+
+  .reply-thread {
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #DCDCDC;
+    h4 {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .submission {
+      input {
+        box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+        color: #333;
+        background-color: #DCDCDC;
+        border-radius: 5px;
+        border: 2px solid black;
+        font-size: 16px;
+        font-weight: 700;
+        height: 32px;
+        padding: 4px 16px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        }
+      }
+  }
+
+  // .comment-buttons{
+  //     a{
+  //     color: #397CAC;
+  //     border: 1px solid #397CAC;
+  //     padding: 0.3em 0.8em;
+  //     border-radius: 0.2em;
+  //     text-decoration: none;
+  //     }
+  //   } 
+
+#forum-box {
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #DCDCDC;
+}
+
+// .site-footer {
+//   // padding-bottom: 300px;
+
+//   .row {
+//     padding-bottom: 110px;
+//   }
+// }
 

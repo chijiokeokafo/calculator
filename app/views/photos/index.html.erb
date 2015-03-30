@@ -6,17 +6,19 @@
     </li>
   <% end %>
 </ul>
-<div id="photo-specs">	
 
+<div class="gallery">
+<h1>Gallery </h1>
+</div>
 
 
 <% if can? :create, Photo %>
-	<h3> <%= link_to "Upload to the gallery!", new_photo_path %><br></h3>
+	<h3> <%= link_to "Upload to the gallery!", new_photo_path, id: 'gallery-upload' %><br></h3>
 <% end %>
+<br>
 
 	<div id="photos">
 	<% @photo.each do |photo| %>
 	  <%= link_to image_tag(photo.avatar_url(:medium)), photo_path(photo) %> 
 	  <% end %>
 	</div>
-</div>	

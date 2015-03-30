@@ -2,6 +2,103 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-	color: black;
+.gallery {
+	h1{
+	color: #F69B32; 
+	}	
 }
+
+#gallery-upload {
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+  color: #337ab7;
+  background-color: #DCDCDC;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: 700;
+  height: 32px;
+  padding: 4px 16px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#gallery {
+	background-color: #DCDCDC;
+.actions {
+	text-align: center;
+	}
+}
+
+#photo-color {
+	h4 {
+		color: #F69B32; 
+	}	
+	h6 {
+		color: #F69B32;
+	}
+.photo-description {
+	color: #F69B32;
+}
+}
+
+.like_text {
+		color: #F69B32;
+		text-align: centre;
+}
+
+.photo-edits {
+	a {
+  color: #397CAC;
+  border: 1px solid #397CAC;
+  padding: 0.3em 0.8em;
+  border-radius: 0.2em;
+  text-decoration: none;
+	}
+}
+
+.comments {
+	border: 3px solid black;
+	border-radius: 10px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #DCDCDC;
+	h5 {
+		 color: #397CAC;
+	}
+	.actions {
+		input {
+		box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+  	color: #333;
+  	background-color: #DCDCDC;
+  	border-radius: 5px;
+  	border: 2px solid black;
+  	font-size: 16px;
+  	font-weight: 700;
+  	height: 32px;
+ 		padding: 4px 16px;
+  	width: auto;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+  }
+		}
+}
+
+.reply {
+	color: #F69B32;
+	// border-top: 1px solid #397CAC;
+	h4 {
+		color: #F69B32; 
+		font-family: 'Orbitron', sans-serif;
+	}
+	h5 {
+		color: #397CAC;
+		}
+	hr {
+		border-top: 1px solid #397CAC;
+	}
+}
+

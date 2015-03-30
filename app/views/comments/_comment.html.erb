@@ -1,14 +1,15 @@
 <div class="comment">
  <%= comment.comment %>
  <p>by <%= comment.user.email %></p>
+ <hr>
 </div>
 
-<div class="comment-buttons">
+<!-- <div class="comment-buttons"> -->
 <!-- if can? :destroy, @post  -->
-<%= link_to 'Edit', edit_post_comment_path(comment.post, comment) %> 
-<!-- end -->
+<!-- link_to 'Edit', edit_post_comment_path(comment.post, comment) %> 
+ --><!-- end -->
 
 <!-- if can? :destroy, @post  -->
-<%= link_to 'Delete', [comment.post, comment], method: :delete, data: { confirm: "Are you sure?"} %> 
+<!-- link_to 'Delete', [comment.post, comment], method: :delete, data: { confirm: "Are you sure?"} %>  -->
  <!-- end -->
-</div>
+<!-- </div> -->
