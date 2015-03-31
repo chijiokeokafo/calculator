@@ -1,4 +1,4 @@
 <% Photo.recent(10).each do |photo|%>
-	  <%=link_to image_tag(photo.avatar_url(:large)), "/photos/#{photo.id}" %>
-<% end %><br><br><br>
+	  <%=link_to image_tag(photo.avatar_url(:large)), "/photos/#{photo.id}" %><br><br>
+<% end %><br>
 		
