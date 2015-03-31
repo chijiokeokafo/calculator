@@ -1,13 +1,15 @@
 <div id="post_content">
   <h1><%= @post.title %></h1>
   <p><%= @post.content %></p>
-
-   <!-- if can? :update, @post  -->
+  <h5><%= @post.user.first_name %></h5>
+  <h5><%= @post.user.email %></h5>
+  
+  <% if can? :update, @post %>
     <%= link_to "Edit", edit_post_path(@post) %> 
- <!-- end  -->
-<!-- if can? :destroy, @post %> -->
+  <% end %> 
+  <% if can? :destroy, @post %>
     <%= link_to "Delete", post_path(@post), data: {confirm: "Are you sure you want to delete this post?"}, :method => :delete %>  
- <!-- end %> -->
+ <% end %>
 </div>
 <br><br>
 
