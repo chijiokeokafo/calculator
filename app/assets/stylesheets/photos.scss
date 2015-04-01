@@ -102,3 +102,16 @@
 	}
 }
 
+#photos{
+	// border: 1px solid red;
+	align-items: centre;
+	display: flex;
+	align-content: space-around;
+	padding-left: 100px;
+	padding-right: 110px;
+	flex-flow: row wrap;
+	width: 100%;
+	
+
+}
+
